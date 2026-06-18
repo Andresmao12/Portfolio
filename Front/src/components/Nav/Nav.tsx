@@ -13,7 +13,7 @@ const Nav = () => {
         { label: "Experience", href: "#experience" },
         { label: "Projects", href: "#projects" },
         { label: "Stack", href: "#stack" },
-        { label: "AI Analyzer", href: "#analyzer" },
+        { label: "AI Analyzer", href: "#clients" },
         { label: "Contact", href: "#contact" }
     ];
 
