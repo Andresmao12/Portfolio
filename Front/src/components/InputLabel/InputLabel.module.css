@@ -1,0 +1,81 @@
+.field {
+    margin-top: 1rem;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.field input,
+.field textarea {
+
+    width: 100%;
+    padding: 1rem .8rem;
+
+    background: var(--bg-input);
+    border: 1px solid var(--border-card);
+    border-radius: 16px;
+    outline: none;
+
+    color: var(--text);
+
+    transition:
+        border-color .25s ease,
+        background .25s ease,
+        box-shadow .25s ease;
+}
+
+.field textarea {
+    padding: .5rem .8rem;
+    resize: vertical;
+    min-height: 160px;
+}
+
+.field input:focus,
+.field textarea:focus {
+
+    border-color: var(--brand-primary);
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--brand-primary) 15%, transparent);
+}
+
+.field input+label,
+.field textarea+label {
+
+    position: absolute;
+
+    pointer-events: none;
+
+    color: var(--text-disabled);
+
+    transition:
+        transform .2s ease,
+        font-size .2s ease,
+        color .2s ease,
+        background .2s ease;
+}
+
+.field input+label {
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.field textarea+label {
+    position: absolute;
+    left: 1rem;
+    top: 10%;
+}
+
+
+.field input:focus+label,
+.field input:not(:placeholder-shown)+label,
+.field textarea:focus+label,
+.field textarea:not(:placeholder-shown)+label {
+
+    top: 0;
+    transform: translateY(-1.2rem) translateX(-1rem);
+
+    font-size: .75rem;
+    color: var(--brand-primary);
+    background: var(--bg-primary);
+}

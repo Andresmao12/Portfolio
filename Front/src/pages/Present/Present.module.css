@@ -1,0 +1,130 @@
+.presentContainer {
+    height: 100vh;
+    width: 100%;
+
+    align-items: center;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+.leftContainer {
+    width: 100%;
+    padding: 3rem;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+.textContainer {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 2rem;
+
+    overflow: hidden;
+
+    &>span {
+        font-size: 1.5rem;
+        font-weight: 400;
+
+        letter-spacing: 0.3rem;
+        color: var(--text);
+        opacity: 0.6;
+    }
+
+    &>button {
+        width: fit-content;
+        padding: 0.75rem 3rem;
+
+        /* align-self: flex-end; */
+
+        letter-spacing: 0.1rem;
+        font-weight: 600;
+
+        color: var(--button-primary-text);
+        background-color: var(--button-primary-bg);
+
+        border-radius: 0.5rem;
+
+        cursor: pointer;
+    }
+}
+
+
+.rightContainer {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.rightContainer::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    /* pointer-events: none; */
+
+    background: linear-gradient(to right,
+            var(--bg-page) 0%,
+            #000001F2 10%,
+            #000001B3 20%,
+            #00000100 45%);
+}
+
+.rightContainer img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    opacity: 0.8;
+}
+
+
+/* MOBILE - TABLET */
+
+@media (max-width: 980px) {
+
+    .presentContainer {
+        grid-template-columns: 1fr;
+        position: relative;
+    }
+
+
+    .leftContainer {
+        position: relative;
+        z-index: 10;
+
+        padding: 5rem;
+    }
+
+
+    .rightContainer {
+        position: absolute;
+        inset: 0;
+
+        z-index: 0;
+
+        &::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-color: #0008;
+        }
+
+        &::before {
+            background: linear-gradient(to top,
+                    var(--bg-page) 0%,
+                    rgba(0, 0, 17, 0.95) 10%,
+                    rgba(0, 0, 17, 0.7) 20%,
+                    rgba(0, 0, 17, 0) 45%);
+        }
+    }
+}

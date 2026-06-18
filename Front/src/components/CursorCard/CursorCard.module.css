@@ -1,0 +1,183 @@
+.card {
+    width: 100%;
+    position: relative;
+
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: var(--bg-card);
+
+    overflow: hidden;
+
+}
+
+
+
+.card:hover {
+    transform: translateY(-4px);
+    border-color: var(--tech-color);
+}
+
+
+
+
+.card::before {
+    content: '';
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(250px circle at var(--glow-x, 50%) var(--glow-y, 50%),
+            var(--tech-color),
+            transparent 60%);
+
+    opacity: 0;
+
+    transition: opacity .2s ease;
+
+    pointer-events: none;
+}
+
+.card:hover::before {
+    opacity: .5;
+}
+
+
+
+
+.techItem {
+
+    align-items: center;
+
+    padding: .5rem .8rem;
+
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+
+    cursor: default;
+
+    transition:
+        transform .25s ease,
+        border-color .25s ease,
+        background .25s ease,
+        box-shadow .25s ease;
+
+}
+
+.techItem {
+    /* flex: 0 0 auto; */
+    display: flex;
+    gap: .4rem;
+
+}
+
+.techItem:nth-child(odd) {
+    flex: 1 0 180px;
+}
+
+
+.techItem:hover {
+    transform: translateX(8px);
+
+    border-color: var(--tech-color);
+
+    background: color-mix(in srgb,
+            var(--tech-color) 10%,
+            transparent);
+
+    box-shadow:
+        0 0 20px color-mix(in srgb,
+            var(--tech-color) 20%,
+            transparent);
+}
+
+
+
+.techIcon {
+    width: 2.5rem;
+    aspect-ratio: 1/1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.6rem;
+
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, .04);
+
+    transition:
+        transform .25s ease,
+        background .25s ease;
+}
+
+
+.techItem:hover .techIcon {
+    transform: scale(1.15);
+
+    background: color-mix(in srgb,
+            var(--tech-color) 15%,
+            transparent);
+}
+
+
+.techItem:hover .techIcon {
+    transform: scale(1.15);
+
+    background: color-mix(in srgb,
+            var(--tech-color) 15%,
+            transparent);
+}
+
+
+.techItem:hover .techInfo span {
+    color: var(--tech-color);
+}
+
+.techInfo {
+    display: flex;
+    flex-direction: column;
+    text-wrap: nowrap;
+}
+
+.techInfo small {
+    opacity: .65;
+    transition: opacity .25s ease;
+}
+
+
+.techItem:hover .techInfo small {
+    opacity: 1;
+}
+
+/* ALIGN */
+
+.card{
+    width: 100%;
+}
+
+/* Container */
+.techList {
+    width: 100%;
+    display: flex;
+    gap: .8rem;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+
+}
+
+/* Item */
+.techItem {
+    width: min-content;
+    /* flex-grow: 1; */
+    flex-basis: min-content;
+    flex-shrink: 0;
+}

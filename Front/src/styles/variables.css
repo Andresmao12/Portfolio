@@ -1,0 +1,82 @@
+/*
+    MOBILE - TABLET: 980px
+    DESKTOP: 1280px
+*/
+
+:root {
+
+    /* Brands */
+    --brand-primary: #FF204E;
+    --brand-secondary: #A0153E;
+    --brand-accent: #5D0E41;
+    --brand-dark: #00224D;
+
+    /* Backgrounds */
+    --bg-page: #000001;
+    --bg-surface: #FFFFFF08;
+    --bg-card: #111111;
+    --bg-input: #FFFFFF05;
+
+    /* Borders */
+    --border-card: #FFFFFF14;
+    --border-input: #FFFFFF14;
+
+    /* Texts */
+    --text: #FFF;
+    --text-brand: var(--brand-primary);
+    --text-inverse: #000;
+    --text-disabled: #AAA;
+
+    --font-family: 'Segoe UI', sans-serif;
+
+
+    /* Buttons */
+    --button-primary-bg: var(--brand-primary);
+    --button-primary-text: var(--text);
+
+    --button-secondary-bg: var(--brand-dark);
+    --button-secondary-text: var(--text);
+
+    --button-neutral: rgba(255, 255, 255, .08);
+    --button-neutral-hover: rgba(255, 255, 255, .15);
+
+    /* Shadows */
+    --shadow: 0 1px 3px var(--brand-primary);
+    --shadow-hover: 0 4px 6px var(--brand-secondary);
+
+    /* States */
+    --success: #22c55e;
+    --warning: #f59e0b;
+    --error: #ef4444;
+    --info: #687EFF;
+
+
+}
+
+
+.light {
+
+    /* Backgrounds */
+    --bg-page: #FFF;
+    --bg-surface: #DDD;
+    --bg-card: #EEE;
+
+    /* Texts */
+    --text: #000;
+    --text-brand: var(--brand-primary);
+    --text-inverse: #FFF;
+    --text-disabled: #AAA;
+
+    /* Buttons */
+    --button-primary-bg: var(--brand-primary);
+    --button-primary-text: var(--text);
+
+    --button-secondary-bg: var(--brand-accent);
+    --button-secondary-text: var(--text);
+
+
+    /* Shadows */
+    --shadow: 0 1px 3px var(--brand-primary);
+    --shadow-hover: 0 4px 6px var(--brand-dark);
+
+}
