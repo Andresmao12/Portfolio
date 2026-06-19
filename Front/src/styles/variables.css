@@ -3,6 +3,14 @@
     DESKTOP: 1280px
 */
 
+@font-face {
+    font-family: 'Work Sans';
+    src: url('../../public/fonts/BigShoulders-VariableFont_opsz\,wght.ttf') format('truetype');
+    font-weight: 100 1000;
+    font-stretch: 25% 151%;
+    font-display: swap;
+}
+
 :root {
 
     /* Brands */
