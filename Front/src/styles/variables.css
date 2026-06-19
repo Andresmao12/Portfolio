@@ -57,9 +57,15 @@
 .light {
 
     /* Backgrounds */
-    --bg-page: #FFF;
-    --bg-surface: #DDD;
-    --bg-card: #EEE;
+    --bg-page: #DDD;
+    --bg-surface: #DDDD;
+    --bg-card: #EEED;
+    --bg-input: #F1F3F7;
+
+    /* Borders */
+    --border-card: #E4E7EC;
+    --border-input: #DDE2E8;
+
 
     /* Texts */
     --text: #000;

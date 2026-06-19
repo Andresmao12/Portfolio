@@ -192,7 +192,7 @@ export const LogoLoop = React.memo<LogoLoopProps>(
     pauseOnHover,
     hoverSpeed,
     fadeOut = false,
-    fadeOutColor,
+    fadeOutColor = 'transparent',
     scaleOnHover = false,
     renderItem,
     ariaLabel = 'Partner logos',

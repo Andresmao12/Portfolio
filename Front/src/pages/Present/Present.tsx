@@ -12,7 +12,7 @@ const Present = () => {
         title: item.title
     }));
 
-    return <div className={styles.presentContainer}>
+    return <div className={styles.presentContainer} id='home'>
 
         <section className={styles.leftContainer}>
 
@@ -36,7 +36,7 @@ const Present = () => {
                     width
                     weight
                     italic
-                    textColor="#ffffff"
+                    textColor="var(--text)"
                     strokeColor="#5227FF"
                     minFontSize={36}
                 />

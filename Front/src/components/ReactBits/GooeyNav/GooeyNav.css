@@ -45,7 +45,7 @@
   margin: 0;
   position: relative;
   z-index: 3;
-  color: white;
+  color: var(--text);
   text-shadow: 0 1px 1px hsl(205deg 30% 10% / 0.2);
 }
 
@@ -58,12 +58,16 @@
     color 0.3s ease,
     box-shadow 0.3s ease;
   box-shadow: 0 0 0.5px 1.5px transparent;
-  color: white;
+  color: var(--text);
 }
 
 .gooey-nav-container nav ul li a {
   display: inline-block;
   padding: 0.6em 1em;
+}
+
+html[light] ~ .gooey-nav-container nav ul li a {
+  background-color: red;
 }
 
 .gooey-nav-container nav ul li:focus-within:has(:focus-visible) {

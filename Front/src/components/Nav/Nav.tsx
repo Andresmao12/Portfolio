@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import styles from './Nav.module.css';
 
 import GooeyNav from '../ReactBits/GooeyNav/GooeyNav';
+import ThemeToggle from '../ThemeToggle/ThemeToggle';
 
 const Nav = () => {
 
@@ -64,6 +65,7 @@ const Nav = () => {
                     timeVariance={300}
                     colors={[1]}
                 />
+                <ThemeToggle />
 
             </div>
 
@@ -92,6 +94,8 @@ const Nav = () => {
                     </a>
 
                 ))}
+
+                <ThemeToggle />
 
             </div>
 
