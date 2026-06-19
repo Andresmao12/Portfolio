@@ -4,18 +4,23 @@ import styles from './Nav.module.css';
 
 import GooeyNav from '../ReactBits/GooeyNav/GooeyNav';
 import ThemeToggle from '../ThemeToggle/ThemeToggle';
+import LanguageToggle from '../LanguageToggle/LanguageToggle';
+
+import { useTranslation } from 'react-i18next';
 
 const Nav = () => {
 
     const [open, setOpen] = useState(false);
+    const { t } = useTranslation()
+
 
     const items = [
-        { label: "Home", href: "#home" },
-        { label: "Experience", href: "#experience" },
-        { label: "Projects", href: "#projects" },
-        { label: "Stack", href: "#stack" },
-        { label: "AI Analyzer", href: "#clients" },
-        { label: "Contact", href: "#contact" }
+        { label: t('nav.home'), href: "#home" },
+        { label: t('nav.experience'), href: "#experience" },
+        { label: t('nav.projects'), href: "#projects" },
+        { label: t('nav.stack'), href: "#stack" },
+        { label: t('nav.analyzer'), href: "#clients" },
+        { label: t('nav.contact'), href: "#contact" }
     ];
 
     const [showNav, setShowNav] = useState(true);
@@ -66,6 +71,7 @@ const Nav = () => {
                     colors={[1]}
                 />
                 <ThemeToggle />
+                <LanguageToggle />
 
             </div>
 

@@ -1,0 +1,183 @@
+{
+    "nav": {
+        "home": "Inicio",
+        "experience": "Experiencia",
+        "projects": "Proyectos",
+        "stack": "Stack",
+        "analyzer": "Analizador IA",
+        "contact": "Contacto",
+        "themeLight": "Claro",
+        "themeDark": "Oscuro",
+        "language": "Idioma"
+    },
+    "home": {
+        "title": "MAURO DEV",
+        "phrase": "Desarrollador de Software y Entusiasta de la IA",
+        "button": "¡Vamos!"
+    },
+    "experience": {
+        "badge": "MI RECORRIDO",
+        "title": "Experiencia y Crecimiento",
+        "description": "Mi camino a través del desarrollo de software, la inteligencia artificial y la ingeniería.",
+        "items": [
+            {
+                "year": "2022",
+                "title": "Técnico en Software",
+                "company": "SENA",
+                "description": "Construí bases sólidas en ingeniería de software, bases de datos y desarrollo backend.",
+                "skills": [
+                    "Python",
+                    "REST APIs",
+                    "Godot"
+                ]
+            },
+            {
+                "year": "2025",
+                "title": "Tecnólogo en Desarrollo de Software",
+                "company": "Institución Universitaria ITM",
+                "description": "Amplié mis conocimientos en ingeniería de software, desarrollo backend, bases de datos y prácticas modernas de programación.",
+                "skills": [
+                    "Node.js",
+                    "Java",
+                    "C#",
+                    ".NET",
+                    "Python",
+                    "Azure",
+                    "SQL Server",
+                    "PostgreSQL",
+                    "REST APIs"
+                ]
+            },
+            {
+                "year": "2025",
+                "title": "Practicante de Inteligencia Artificial",
+                "company": "Protección S.A.",
+                "description": "Participé en iniciativas de inteligencia artificial, automatización de procesos y soluciones de software para el sector financiero.",
+                "skills": [
+                    "AWS Bedrock",
+                    "CloudWatch",
+                    "Scrum",
+                    "Machine Learning",
+                    "LLMs",
+                    "IaC",
+                    "Fine-Tuning",
+                    "Prompt Engineering",
+                    "TypeScript",
+                    "RAG",
+                    "Bases de Datos Vectoriales"
+                ]
+            },
+            {
+                "year": "2026",
+                "current": true,
+                "title": "Estudiante de Ingeniería de Sistemas",
+                "company": "Institución Universitaria ITM",
+                "description": "Continúo ampliando mis conocimientos en arquitectura de software, sistemas escalables y metodologías modernas de desarrollo.",
+                "skills": [
+                    "Arquitectura de Software",
+                    "Diseño de Sistemas",
+                    "Desarrollo Full Stack"
+                ]
+            }
+        ]
+    },
+    "projects": {
+        "badge": "PROYECTOS",
+        "title": "Trabajos Destacados",
+        "description": "Una colección de soluciones de software, inteligencia artificial y nube desarrolladas en diferentes dominios.",
+        "challenge": "Desafío",
+        "solution": "Solución",
+        "impact": "Impacto",
+        "github": "GitHub",
+        "demo": "Demo"
+    },
+    "stack": {
+        "badge": "Stack",
+        "title": "Ecosistema tecnologico",
+        "description": "Una colección de soluciones de software, inteligencia artificial y nube desarrolladas en diferentes dominios."
+    },
+    "clients": {
+        "badge": "CLIENTES",
+        "title": "¿Tienes una Idea?",
+        "description": "Describe tu proyecto y recibe una evaluación técnica impulsada por IA basada en mi stack tecnológico actual.",
+        "analyzer": {
+            "badge": "ANALIZADOR IA",
+            "title": "Valida tu idea de proyecto",
+            "description": "Obtén un análisis rápido de viabilidad, tecnologías recomendadas y una posible hoja de ruta para un MVP.",
+            "placeholder": "Ejemplo: Quiero una plataforma donde los restaurantes gestionen pedidos y los clientes puedan rastrear entregas en tiempo real.",
+            "button": "Analizar Proyecto",
+            "buttonAction": "Analizando proyecto...",
+            "errorEmptyIdea": "Debes escribir una idea para analizarla",
+            "loadingDescription": "Analizando arquitectura, viabilidad y stack tecnológico recomendado...",
+            "results": {
+                "viability": "Viability",
+                "complexity": "Complexity",
+                "timeline": "Timeline",
+                "recommendedStack": "Recommended Stack",
+                "suggestedMvp": "Suggested MVP",
+                "buildButton": "Let's Build This"
+            }
+        },
+        "card": {
+            "secureAccess": "ACCESO SEGURO",
+            "client": "CLIENTE VIP",
+            "status": "ANALIZADO",
+            "idLabel": "NÚMERO DE ID"
+        },
+        "feedback": {
+            "badge": "OPINIONES",
+            "title": "Colaboraciones Anteriores",
+            "items": [
+                {
+                    "text": "El MVP fue entregado más rápido de lo esperado. La comunicación y las decisiones técnicas fueron excelentes.",
+                    "author": "Fundador de Startup",
+                    "company": "Plataforma SaaS"
+                },
+                {
+                    "text": "La propuesta de IA nos ayudó a validar el proyecto antes de invertir recursos.",
+                    "author": "Propietario de Negocio",
+                    "company": "Empresa Retail"
+                },
+                {
+                    "text": "Arquitectura clara, hoja de ruta realista y gran comprensión de los requisitos.",
+                    "author": "Product Manager",
+                    "company": "Startup Tecnológica"
+                }
+            ]
+        }
+    },
+    "contact": {
+        "badge": "CONTACTO",
+        "title": "Conectemos",
+        "description": "Interesado en desarrollo de software, soluciones de IA, tecnologías cloud u oportunidades de colaboración.",
+        "status": "Abierto a oportunidades",
+        "actions": {
+            "github": {
+                "title": "GitHub",
+                "subtitle": "Ver Proyectos"
+            },
+            "linkedin": {
+                "title": "LinkedIn",
+                "subtitle": "Conectemos"
+            },
+            "resume": {
+                "title": "Hoja de Vida",
+                "subtitle": "Descargar CV"
+            },
+            "email": {
+                "title": "Correo",
+                "subtitle": "Contáctame"
+            }
+        },
+        "form": {
+            "badge": "INICIEMOS UNA CONVERSACIÓN",
+            "description": "Cuéntame sobre tu proyecto, idea o pregunta.",
+            "name": "Tu nombre",
+            "email": "Correo electrónico",
+            "subject": "Asunto",
+            "message": "Cuéntame sobre tu idea, proyecto o pregunta...",
+            "helper": "✨ Los mensajes pueden ser analizados primero para determinar si una IA puede proporcionar una respuesta inmediata.",
+            "button": "Enviar Mensaje"
+        }
+    }
+}

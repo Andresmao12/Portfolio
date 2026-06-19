@@ -5,11 +5,18 @@ import Threads from '../../components/ReactBits/ThreadsBackground/Threads';
 import ExperienceCard from '../../components/ExperienceCard/ExperienceCard';
 import Header from '../../components/Header/Header';
 
-import { experiences } from '../../constants/experience';
+// import { experiences } from '../../constants/experience';
+import { useTranslation } from 'react-i18next';
 
 import type { ExperienceItem } from '../../constants/experience';
 
 const Experience = () => {
+
+    const { t } = useTranslation();
+
+    const experiences = t('experience.items', {
+        returnObjects: true
+    }) as ExperienceItem[];
 
     const sortedExperiences = [...experiences].sort((a, b) => {
 
@@ -27,10 +34,9 @@ const Experience = () => {
 
             <Header center>
 
-                <span>MY JOURNEY</span>
-
-                <h2> Experience & Growth</h2>
-                <p>My path through software development, artificial intelligence and engineering.</p>
+                <span>{t('experience.badge')}</span>
+                <h2>{t('experience.title')}</h2>
+                <p>{t('experience.description')}</p>
 
             </Header>
 

@@ -1,0 +1,183 @@
+{
+    "nav": {
+        "home": "Home",
+        "experience": "Experience",
+        "projects": "Projects",
+        "stack": "Stack",
+        "analyzer": "IA Analyzer",
+        "contact": "Contact",
+        "themeLight": "Light",
+        "themeDark": "Dark",
+        "language": "Language"
+    },
+    "home": {
+        "title": "MAURO DEV",
+        "phrase": "Software Developer & AI Enthusiast",
+        "button": "Go!"
+    },
+    "experience": {
+        "badge": "MY JOURNEY",
+        "title": "Experience & Growth",
+        "description": "My path through software development, artificial intelligence and engineering.",
+        "items": [
+            {
+                "year": "2022",
+                "title": "Software Technician",
+                "company": "SENA",
+                "description": "Built strong foundations in software engineering, databases and backend development.",
+                "skills": [
+                    "Python",
+                    "REST APIs",
+                    "Godot"
+                ]
+            },
+            {
+                "year": "2025",
+                "title": "Software Technologist",
+                "company": "Institucion Universitaria ITM",
+                "description": "Expanded knowledge in software engineering, backend development, databases and modern programming practices.",
+                "skills": [
+                    "Node.js",
+                    "Java",
+                    "C#",
+                    ".NET",
+                    "Python",
+                    "Azure",
+                    "SQL Server",
+                    "PostgreSQL",
+                    "REST APIs"
+                ]
+            },
+            {
+                "year": "2025",
+                "title": "AI Internship",
+                "company": "Proteccion S.A.",
+                "description": "Worked on artificial intelligence initiatives, process automation and software solutions for the financial sector.",
+                "skills": [
+                    "AWS Bedrock",
+                    "CloudWatch",
+                    "Scrum",
+                    "Machine Learning",
+                    "LLMs",
+                    "IaC",
+                    "Fine-Tuning",
+                    "Prompt Engineering",
+                    "TypeScript",
+                    "RAG",
+                    "Vector Databases"
+                ]
+            },
+            {
+                "year": "2026",
+                "current": true,
+                "title": "Systems Engineering Student",
+                "company": "Institucion Universitaria ITM",
+                "description": "Continuously expanding knowledge in software architecture, scalable systems and modern development methodologies.",
+                "skills": [
+                    "Software Architecture",
+                    "System Design",
+                    "Full Stack Development"
+                ]
+            }
+        ]
+    },
+    "stack": {
+        "badge": "Stack",
+        "title": "Technology Ecosystem",
+        "description": "A collection of software, artificial intelligence and cloud technologies that I use to build modern and scalable solutions."
+    },
+    "clients": {
+        "badge": "CLIENTS",
+        "title": "Have an Idea?",
+        "description": "Describe your project and receive an AI-powered technical assessment based on my current stack.",
+        "analyzer": {
+            "badge": "AI ANALYZER",
+            "title": "Validate your project idea",
+            "description": "Get a quick feasibility analysis, recommended technologies and a possible MVP roadmap.",
+            "placeholder": "Example: I want a platform where restaurants can manage orders and customers can track deliveries in real time.",
+            "button": "Analyze Project",
+            "buttonAction": "Analyzing project...",
+            "errorEmptyIdea": "You should write down your idea to be analyzed",
+            "loadingDescription": "Analyzing architecture, feasibility and recommended technology stack...",
+            "results": {
+                "viability": "Viability",
+                "complexity": "Complexity",
+                "timeline": "Timeline",
+                "recommendedStack": "Recommended Stack",
+                "suggestedMvp": "Suggested MVP",
+                "buildButton": "Let's Build This"
+            }
+        },
+        "card": {
+            "secureAccess": "SECURE ACCESS",
+            "client": "VIP CLIENT",
+            "status": "ANALYZED",
+            "idLabel": "ID NUMBER"
+        },
+        "feedback": {
+            "badge": "FEEDBACK",
+            "title": "Previous Collaborations",
+            "items": [
+                {
+                    "text": "The MVP was delivered faster than expected. Communication and technical decisions were excellent.",
+                    "author": "Startup Founder",
+                    "company": "SaaS Platform"
+                },
+                {
+                    "text": "The AI proposal helped us validate the project before investing resources.",
+                    "author": "Business Owner",
+                    "company": "Retail Company"
+                },
+                {
+                    "text": "Clear architecture, realistic roadmap and great understanding of the requirements.",
+                    "author": "Product Manager",
+                    "company": "Tech Startup"
+                }
+            ]
+        }
+    },
+    "projects": {
+        "badge": "PROJECTS",
+        "title": "Selected Work",
+        "description": "A collection of software, AI and cloud solutions built across different domains.",
+        "challenge": "Challenge",
+        "solution": "Solution",
+        "impact": "Impact",
+        "github": "GitHub",
+        "demo": "Demo"
+    },
+    "contact": {
+        "badge": "CONTACT",
+        "title": "Let's Connect",
+        "description": "Interested in software development, AI solutions, cloud technologies or collaboration opportunities.",
+        "status": "Open to opportunities",
+        "actions": {
+            "github": {
+                "title": "GitHub",
+                "subtitle": "View Projects"
+            },
+            "linkedin": {
+                "title": "LinkedIn",
+                "subtitle": "Let's Connect"
+            },
+            "resume": {
+                "title": "Resume",
+                "subtitle": "Download CV"
+            },
+            "email": {
+                "title": "Email",
+                "subtitle": "Contact Me"
+            }
+        },
+        "form": {
+            "badge": "START A CONVERSATION",
+            "description": "Tell me about your project, idea or question.",
+            "name": "Your name",
+            "email": "Email Address",
+            "subject": "Subject",
+            "message": "Tell me about your idea, project or question...",
+            "helper": "✨ Messages may be analyzed first to determine if AI can provide an instant answer.",
+            "button": "Send Message"
+        }
+    }
+}

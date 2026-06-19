@@ -3,9 +3,13 @@ import styles from './Present.module.css'
 import TextPressure from '../../components/ReactBits/TextPressure/TextPressure';
 import LogoLoop from '../../components/ReactBits/LogoLoop/LogoLoop';
 
+import { useTranslation } from 'react-i18next';
+
 import { stackLogos } from '../../constants/stack';
 
 const Present = () => {
+
+    const { t } = useTranslation()
 
     const logos = stackLogos.map(item => ({
         node: <item.node />,
@@ -41,8 +45,8 @@ const Present = () => {
                     minFontSize={36}
                 />
 
-                <span>Software Developer & AI Enthusiast</span>
-                <button type="button">Go!</button>
+                <span>{t('home.phrase')}</span>
+                <button type="button">{t('home.button')}</button>
 
 
             </div>

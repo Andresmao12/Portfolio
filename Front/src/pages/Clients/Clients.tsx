@@ -4,6 +4,8 @@ import { useState } from 'react';
 import Header from '../../components/Header/Header';
 import ReflectiveCard from '../../components/ReactBits/ReflectiveCard/ReflectiveCard';
 
+import { useTranslation } from 'react-i18next';
+
 const testimonials = [
     {
         name: 'Startup Founder',
@@ -34,10 +36,12 @@ const Clients = () => {
     const [analysis, setAnalysis] = useState<any>(null);
     const [error, setError] = useState<ErrorType>({});
 
+    const { t } = useTranslation()
+
     const handleAnalyze = async () => {
 
         if (!idea.trim()) {
-            setError({ message: 'You should write down your idea to be analyzed' });
+            setError({ message: t('clients.analyzer.errorEmptyIdea') });
             return
         }
 
@@ -77,12 +81,9 @@ const Clients = () => {
         <section id='clients' className={styles.clientsSection}>
 
             <Header center>
-                <span>CLIENTS</span>
-                <h2>Have an Idea?</h2>
-                <p>
-                    Describe your project and receive an AI-powered
-                    technical assessment based on my current stack.
-                </p>
+                <span>{t('clients.badge')}</span>
+                <h2>{t('clients.title')}</h2>
+                <p>{t('clients.description')}</p>
             </Header>
 
             <article className={styles.analyzerSection}>
@@ -94,17 +95,14 @@ const Clients = () => {
                 <div className={styles.analyzerCard}>
 
                     <Header>
-                        <span>AI ANALYZER</span>
-                        <h3>Validate your project idea</h3>
-                        <p>
-                            Get a quick feasibility analysis,
-                            recommended technologies and a possible MVP roadmap.
-                        </p>
+                        <span>{t('clients.analyzer.badge')}</span>
+                        <h3>{t('clients.analyzer.title')}</h3>
+                        <p>{t('clients.analyzer.description')}</p>
                     </Header>
 
                     <textarea
                         className={styles.textarea}
-                        placeholder='Example: I want a platform where restaurants can manage orders and customers can track deliveries in real time.'
+                        placeholder={t('clients.analyzer.placeholder')}
                         value={idea}
                         onChange={(e) => setIdea(e.target.value)}
                     />
@@ -116,14 +114,14 @@ const Clients = () => {
                         onClick={handleAnalyze}
                         disabled={loading}>
                         {loading
-                            ? 'Analyzing...'
-                            : 'Analyze Project'}
+                            ? t('clients.analyzer.buttonAction')
+                            : t('clients.analyzer.button')}
                     </button>
                     {loading && (
 
                         <div className={styles.loaderContainer}>
                             <div className={styles.loader}></div>
-                            <p>Analyzing architecture, feasibility and recommended stack...</p>
+                            <p>{t('clients.analyzer.loadingDescription')}</p>
                         </div>
 
                     )}
@@ -136,17 +134,17 @@ const Clients = () => {
                             <div className={styles.statsGrid}>
 
                                 <article className={styles.statCard}>
-                                    <small>Viability</small>
+                                    <small>{t('clients.analyzer.results.viability')}</small>
                                     <strong>{analysis.viability}</strong>
                                 </article>
 
                                 <article className={styles.statCard}>
-                                    <small>Complexity</small>
+                                    <small>{t('clients.analyzer.results.complexity')}</small>
                                     <strong>{analysis.complexity}</strong>
                                 </article>
 
                                 <article className={styles.statCard}>
-                                    <small>Timeline</small>
+                                    <small>{t('clients.analyzer.results.timeline')}</small>
                                     <strong>{analysis.timeline}</strong>
                                 </article>
 
@@ -154,9 +152,7 @@ const Clients = () => {
 
                             <div className={styles.resultBlock}>
 
-                                <h4>
-                                    Recommended Stack
-                                </h4>
+                                <h4>{t('clients.analyzer.results.recommendedStack')}</h4>
 
                                 <div className={styles.tags}>
 
@@ -174,9 +170,7 @@ const Clients = () => {
 
                             <div className={styles.resultBlock}>
 
-                                <h4>
-                                    Suggested MVP
-                                </h4>
+                                <h4>{t('clients.analyzer.results.suggestedMvp')}</h4>
 
                                 <ul>
 
@@ -202,7 +196,7 @@ const Clients = () => {
                                         })
                                 }
                             >
-                                Let's Build This
+                                {t('clients.analyzer.results.buildButton')}
                             </button>
 
                         </div>
@@ -217,8 +211,8 @@ const Clients = () => {
             <div className={styles.feedbackSection}>
 
                 <Header center>
-                    <span>FEEDBACK</span>
-                    <h3>Previous Collaborations</h3>
+                    <span>{t('clients.feedback.badge')}</span>
+                    <h3>{t('clients.feedback.title')}</h3>
                 </Header>
 
                 <div className={styles.feedbackGrid}>

@@ -6,9 +6,12 @@ import { FiGithub, FiExternalLink } from 'react-icons/fi';
 import Header from '../../components/Header/Header';
 
 import { projects } from '../../constants/projects'
+import { useTranslation } from 'react-i18next';
+
 
 const Projects = () => {
 
+    const { t } = useTranslation()
 
     for (let i = 1; i < projects.length; i += 2) {
 
@@ -27,12 +30,9 @@ const Projects = () => {
         <section id="projects" className={styles.projectsSection}>
 
             <Header center>
-                <span>PROJECTS</span>
-                <h2>Selected Work</h2>
-                <p>
-                    A collection of software, AI and cloud
-                    solutions built across different domains.
-                </p>
+                <span>{t('projects.badge')}</span>
+                <h2>{t('projects.title')}</h2>
+                <p>{t('projects.description')}</p>
             </Header>
 
             <div className={styles.grid}>
@@ -58,13 +58,13 @@ const Projects = () => {
                             <div className={styles.content}>
 
                                 <div className={styles.info}>
-                                    <strong>Challenge</strong>
+                                    <strong>{t('projects.challenge')}</strong>
                                     <p>{project.challenge}</p>
 
-                                    <strong>Solution</strong>
+                                    <strong>{t('projects.solution')}</strong>
                                     <p>{project.solution}</p>
 
-                                    <strong>Impact</strong>
+                                    <strong>{t('projects.impact')}</strong>
                                     <p>{project.impact}</p>
                                 </div>
 
@@ -80,10 +80,9 @@ const Projects = () => {
                                             rel="noreferrer"
                                         >
                                             <FiGithub />
-                                            Github
+                                            {t('projects.github')}
                                         </a>
                                     )}
-
                                     {project.demo && (
                                         <a
                                             href={project.demo}
@@ -91,7 +90,7 @@ const Projects = () => {
                                             rel="noreferrer"
                                         >
                                             <FiExternalLink />
-                                            Demo
+                                            {t('projects.demo')}
                                         </a>
                                     )}
                                 </div>

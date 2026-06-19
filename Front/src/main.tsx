@@ -2,6 +2,8 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { ThemeProvider } from './context/context.tsx'
 
+import './services/i18n.ts';
+
 import App from './App.tsx'
 
 import './styles/global.css'

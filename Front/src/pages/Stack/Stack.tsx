@@ -3,6 +3,7 @@ import styles from './Stack.module.css';
 import CursorCard from '../../components/CursorCard/CursorCard';
 import Header from '../../components/Header/Header';
 
+import { useTranslation } from 'react-i18next';
 
 import {
     stackCategories,
@@ -11,13 +12,15 @@ import {
 
 const Stack = () => {
 
+    const { t } = useTranslation()
+
     return (
         <section id="stack" className={styles.stackContainer}>
 
             <Header center>
 
-                <span>TECH STACK</span>
-                <h2>Technology Ecosystem</h2>
+                <span>{t('stack.badge')}</span>
+                <h2>{t('stack.title')}</h2>
 
             </Header>
 
