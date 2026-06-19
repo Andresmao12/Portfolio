@@ -1,0 +1,5 @@
+.toggleButton{
+    display: flex;
+    gap: 1rem;
+    padding: .9rem 1rem;
+}
