@@ -51,7 +51,7 @@ const Present = () => {
         <section className={styles.rightContainer}>
 
             <img
-                src="imgCompress.webp"
+                src="img/imgPresent.webp"
                 alt="Mauro"
             />
 
