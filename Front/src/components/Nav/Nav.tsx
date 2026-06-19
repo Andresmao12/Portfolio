@@ -102,6 +102,7 @@ const Nav = () => {
                 ))}
 
                 <ThemeToggle />
+                <LanguageToggle />
 
             </div>
 
