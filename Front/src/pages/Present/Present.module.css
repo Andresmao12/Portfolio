@@ -1,6 +1,7 @@
 .presentContainer {
     height: 100vh;
     width: 100%;
+    overflow: hidden;
 
     align-items: center;
 

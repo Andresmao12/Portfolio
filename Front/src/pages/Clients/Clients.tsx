@@ -1,11 +1,12 @@
 import styles from './Clients.module.css';
+
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import Header from '../../components/Header/Header';
 import ReflectiveCard from '../../components/ReactBits/ReflectiveCard/ReflectiveCard';
 
-import { useTranslation } from 'react-i18next';
-
+//? TEMPORAL
 const testimonials = [
     {
         name: 'Startup Founder',
@@ -157,31 +158,19 @@ const Clients = () => {
                                 <div className={styles.tags}>
 
                                     {analysis.stack.map((item: string) => (
-
-                                        <span key={item}>
-                                            {item}
-                                        </span>
-
+                                        <span key={item}> {item}</span>
                                     ))}
 
                                 </div>
-
                             </div>
 
                             <div className={styles.resultBlock}>
-
                                 <h4>{t('clients.analyzer.results.suggestedMvp')}</h4>
 
                                 <ul>
-
                                     {analysis.mvp.map((item: string) => (
-
-                                        <li key={item}>
-                                            {item}
-                                        </li>
-
+                                        <li key={item}>{item}</li>
                                     ))}
-
                                 </ul>
 
                             </div>
@@ -198,9 +187,7 @@ const Clients = () => {
                             >
                                 {t('clients.analyzer.results.buildButton')}
                             </button>
-
                         </div>
-
                     )}
                 </div>
 
@@ -225,15 +212,10 @@ const Clients = () => {
                                 <strong>{item.name}</strong>
                                 <span>{item.company}</span>
                             </footer>
-
                         </article>
-
                     ))}
-
                 </div>
-
             </div>
-
         </section>
     );
 };

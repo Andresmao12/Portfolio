@@ -1,12 +1,11 @@
 import styles from './Experience.module.css';
 
+import { useTranslation } from 'react-i18next';
+
 import Threads from '../../components/ReactBits/ThreadsBackground/Threads';
 
 import ExperienceCard from '../../components/ExperienceCard/ExperienceCard';
 import Header from '../../components/Header/Header';
-
-// import { experiences } from '../../constants/experience';
-import { useTranslation } from 'react-i18next';
 
 import type { ExperienceItem } from '../../constants/experience';
 

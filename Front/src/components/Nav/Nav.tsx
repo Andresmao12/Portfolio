@@ -1,18 +1,17 @@
-import { useState, useEffect } from 'react';
-
 import styles from './Nav.module.css';
+
+import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import GooeyNav from '../ReactBits/GooeyNav/GooeyNav';
 import ThemeToggle from '../ThemeToggle/ThemeToggle';
 import LanguageToggle from '../LanguageToggle/LanguageToggle';
 
-import { useTranslation } from 'react-i18next';
-
 const Nav = () => {
 
     const [open, setOpen] = useState(false);
+    
     const { t } = useTranslation()
-
 
     const items = [
         { label: t('nav.home'), href: "#home" },
@@ -107,7 +106,6 @@ const Nav = () => {
             </div>
 
         </nav>
-
     );
 };
 

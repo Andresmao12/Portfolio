@@ -1,13 +1,12 @@
-import { useRef } from 'react';
-
 import styles from './CursorCard.module.css'
+
+import { useRef } from 'react';
 
 import type { StackCategory } from '../../constants/stack';
 
 interface CursorCardProps {
     category: StackCategory;
 }
-
 
 const CursorCard = ({ category }: CursorCardProps) => {
 
@@ -54,14 +53,11 @@ const CursorCard = ({ category }: CursorCardProps) => {
                         </div>
 
                     </li>
-
                 );
             })}
         </ul>
 
     </article>
-
-
 }
 
 export default CursorCard

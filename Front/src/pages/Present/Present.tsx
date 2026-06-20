@@ -1,9 +1,9 @@
 import styles from './Present.module.css'
 
+import { useTranslation } from 'react-i18next';
+
 import TextPressure from '../../components/ReactBits/TextPressure/TextPressure';
 import LogoLoop from '../../components/ReactBits/LogoLoop/LogoLoop';
-
-import { useTranslation } from 'react-i18next';
 
 import { stackLogos } from '../../constants/stack';
 
@@ -48,17 +48,11 @@ const Present = () => {
                 <span>{t('home.phrase')}</span>
                 <button type="button">{t('home.button')}</button>
 
-
             </div>
         </section >
 
         <section className={styles.rightContainer}>
-
-            <img
-                src="img/imgPresent.webp"
-                alt="Mauro"
-            />
-
+            <img src="img/imgPresent.webp" alt="Mauro" />
         </section>
 
 

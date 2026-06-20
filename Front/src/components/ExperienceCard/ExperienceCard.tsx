@@ -27,9 +27,7 @@ const ExperienceCard = ({ year, company, position, title, description, skills }:
             <p className={styles.description}>{description}</p>
 
             <ul className={styles.skills}>
-
                 {skills.map(skill => <li key={skill} className={styles.skill}>{skill}</li>)}
-            
             </ul>
 
         </article>

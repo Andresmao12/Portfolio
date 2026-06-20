@@ -1,7 +1,7 @@
+import styles from './ThemeToggle.module.css'
+
 import { Moon, Sun } from 'lucide-react';
 import { useTheme } from '../../context/context';
-
-import styles from './ThemeToggle.module.css'
 
 const ThemeToggle = () => {
 

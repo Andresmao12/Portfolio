@@ -21,8 +21,6 @@ const Contact = () => {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-
-        console.log('FORMDATA: ', formData);
     };
 
     const handleChange = (field: keyof typeof formData, value: string) => {
@@ -62,19 +60,12 @@ const Contact = () => {
                             >
                                 <Icon className={styles.icon} />
 
-                                <h3>
-                                    {t(`contact.actions.${item.key}.title`)}
-                                </h3>
-
-                                <small>
-                                    {t(`contact.actions.${item.key}.subtitle`)}
-                                </small>
-
+                                <h3>{t(`contact.actions.${item.key}.title`)}</h3>
+                                <small>{t(`contact.actions.${item.key}.subtitle`)}</small>
                             </a>
                         );
                     })}
                 </div>
-
             </div>
 
             <form className={styles.formCard} onSubmit={handleSubmit}>
@@ -113,25 +104,14 @@ const Contact = () => {
                         type='textArea'
                         onChange={(value) => handleChange('message', value)}
                     />
-
+                    
                 </div>
 
                 <div className={styles.footer}>
-                    <span className={styles.helper}>
-                        {t('contact.form.helper')}
-                    </span>
-
-                    <button
-                        type="submit"
-                        className={styles.submitButton}
-                    >
-                        {t('contact.form.button')}
-                    </button>
-
+                    <span className={styles.helper}>{t('contact.form.helper')}</span>
+                    <button type="submit" className={styles.submitButton}>{t('contact.form.button')}</button>
                 </div>
-
             </form>
-
         </section>
     );
 };

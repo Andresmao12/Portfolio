@@ -1,9 +1,9 @@
 import styles from './Stack.module.css';
 
+import { useTranslation } from 'react-i18next';
+
 import CursorCard from '../../components/CursorCard/CursorCard';
 import Header from '../../components/Header/Header';
-
-import { useTranslation } from 'react-i18next';
 
 import {
     stackCategories,
@@ -25,7 +25,6 @@ const Stack = () => {
             </Header>
 
             <main className={styles.grid}>
-
                 {stackCategories.map(
                     (category: StackCategory) => (
 
@@ -33,10 +32,8 @@ const Stack = () => {
                             key={category.title}
                             category={category}
                         />
-
                     )
                 )}
-
             </main>
 
         </section>

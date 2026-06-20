@@ -1,12 +1,11 @@
 import styles from './Projects.module.css';
 
-
+import { useTranslation } from 'react-i18next';
 import { FiGithub, FiExternalLink } from 'react-icons/fi';
 
 import Header from '../../components/Header/Header';
 
 import { projects } from '../../constants/projects'
-import { useTranslation } from 'react-i18next';
 
 
 const Projects = () => {
@@ -20,7 +19,6 @@ const Projects = () => {
             console.log('Entramos al if')
             projects[i - 1].refill = true;
             projects[i].refill = true;
-
         }
     }
 
@@ -94,15 +92,12 @@ const Projects = () => {
                                         </a>
                                     )}
                                 </div>
-
                             </div>
-
                         </div>
 
                     </article>
 
                 ))}
-
             </div>
 
         </section>
