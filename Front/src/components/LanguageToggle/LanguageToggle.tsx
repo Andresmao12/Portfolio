@@ -20,7 +20,15 @@ const LanguageToggle = () => {
 
     return (
         <button onClick={changeLanguage} className={styles.button}>
-            {i18n.language.toUpperCase()}
+            <span className={styles.desktop}>
+                {i18n.language.toUpperCase()}
+            </span>
+
+            <span className={styles.mobile}>
+                {i18n.language === 'en'
+                    ? 'Español'
+                    : 'English'}
+            </span>
         </button>
     );
 };
