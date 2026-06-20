@@ -18,7 +18,7 @@
     "experience": {
         "badge": "MI RECORRIDO",
         "title": "Experiencia y Crecimiento",
-        "description": "Mi camino a través del desarrollo de software, la inteligencia artificial y la ingeniería.",
+        "description": "Formación, experiencia profesional y aprendizaje continuo en desarrollo de software e inteligencia artificial.",
         "items": [
             {
                 "year": "2022",
@@ -35,7 +35,7 @@
                 "year": "2025",
                 "title": "Tecnólogo en Desarrollo de Software",
                 "company": "Institución Universitaria ITM",
-                "description": "Amplié mis conocimientos en ingeniería de software, desarrollo backend, bases de datos y prácticas modernas de programación.",
+                "description": "Profundicé en desarrollo backend, bases de datos, arquitectura de software y buenas prácticas de ingeniería.",
                 "skills": [
                     "Node.js",
                     "Java",
@@ -72,7 +72,7 @@
                 "current": true,
                 "title": "Estudiante de Ingeniería de Sistemas",
                 "company": "Institución Universitaria ITM",
-                "description": "Continúo ampliando mis conocimientos en arquitectura de software, sistemas escalables y metodologías modernas de desarrollo.",
+                "description": "Fortalezco mis habilidades en arquitectura de software, diseño de sistemas escalables y desarrollo de soluciones empresariales.",
                 "skills": [
                     "Arquitectura de Software",
                     "Diseño de Sistemas",
@@ -84,7 +84,7 @@
     "projects": {
         "badge": "PROYECTOS",
         "title": "Trabajos Destacados",
-        "description": "Una colección de soluciones de software, inteligencia artificial y nube desarrolladas en diferentes dominios.",
+        "description": "Proyectos desarrollados en software, inteligencia artificial y tecnologías cloud para resolver problemas reales.",
         "challenge": "Desafío",
         "solution": "Solución",
         "impact": "Impacto",
@@ -93,8 +93,8 @@
     },
     "stack": {
         "badge": "Stack",
-        "title": "Ecosistema tecnologico",
-        "description": "Una colección de soluciones de software, inteligencia artificial y nube desarrolladas en diferentes dominios."
+        "title": "Tecnologías que utilizo",
+        "description": "Herramientas, lenguajes y plataformas que empleo para diseñar, construir y desplegar soluciones."
     },
     "clients": {
         "badge": "CLIENTES",
@@ -102,20 +102,20 @@
         "description": "Describe tu proyecto y recibe una evaluación técnica impulsada por IA basada en mi stack tecnológico actual.",
         "analyzer": {
             "badge": "ANALIZADOR IA",
-            "title": "Valida tu idea de proyecto",
-            "description": "Obtén un análisis rápido de viabilidad, tecnologías recomendadas y una posible hoja de ruta para un MVP.",
+            "title": "Evalúa tu idea",
+            "description": "Recibe una evaluación inicial de viabilidad, complejidad, tecnologías recomendadas y un posible MVP.",
             "placeholder": "Ejemplo: Quiero una plataforma donde los restaurantes gestionen pedidos y los clientes puedan rastrear entregas en tiempo real.",
             "button": "Analizar Proyecto",
             "buttonAction": "Analizando proyecto...",
             "errorEmptyIdea": "Debes escribir una idea para analizarla",
             "loadingDescription": "Analizando arquitectura, viabilidad y stack tecnológico recomendado...",
             "results": {
-                "viability": "Viability",
-                "complexity": "Complexity",
-                "timeline": "Timeline",
-                "recommendedStack": "Recommended Stack",
-                "suggestedMvp": "Suggested MVP",
-                "buildButton": "Let's Build This"
+                "viability": "Viabilidad",
+                "complexity": "Complejidad",
+                "timeline": "Tiempo estimado",
+                "recommendedStack": "Tecnologías recomendadas",
+                "suggestedMvp": "MVP recomendado",
+                "buildButton": "Hablemos de tu proyecto"
             }
         },
         "card": {
@@ -126,10 +126,10 @@
         },
         "feedback": {
             "badge": "OPINIONES",
-            "title": "Colaboraciones Anteriores",
+            "title": "Lo que dicen sobre mi trabajo",
             "items": [
                 {
-                    "text": "El MVP fue entregado más rápido de lo esperado. La comunicación y las decisiones técnicas fueron excelentes.",
+                    "text": "El MVP estuvo listo antes de lo previsto. La comunicación fue clara y las decisiones técnicas acertadas.",
                     "author": "Fundador de Startup",
                     "company": "Plataforma SaaS"
                 },
@@ -148,9 +148,9 @@
     },
     "contact": {
         "badge": "CONTACTO",
-        "title": "Conectemos",
-        "description": "Interesado en desarrollo de software, soluciones de IA, tecnologías cloud u oportunidades de colaboración.",
-        "status": "Abierto a oportunidades",
+        "title": "Hablemos",
+        "description": "Aquí encontrarás mis proyectos, experiencia profesional y formas de contactarme.",
+        "status": "Esperando nuevos retos",
         "actions": {
             "github": {
                 "title": "GitHub",
@@ -171,12 +171,12 @@
         },
         "form": {
             "badge": "INICIEMOS UNA CONVERSACIÓN",
-            "description": "Cuéntame sobre tu proyecto, idea o pregunta.",
+            "description": "Compárteme los detalles y te responderé lo antes posible.",
             "name": "Tu nombre",
             "email": "Correo electrónico",
             "subject": "Asunto",
             "message": "Cuéntame sobre tu idea, proyecto o pregunta...",
-            "helper": "✨ Los mensajes pueden ser analizados primero para determinar si una IA puede proporcionar una respuesta inmediata.",
+            "helper": "✨ El mensaje primero sera analizado, algunas consultas pueden recibir una respuesta inicial asistida por IA para agilizar el proceso.",
             "button": "Enviar Mensaje"
         }
     }

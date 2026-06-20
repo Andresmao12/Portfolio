@@ -12,6 +12,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: var(--font-family);
     background-color: var(--bg-page);
@@ -19,11 +23,13 @@ body {
     overflow-x: hidden;
 }
 
-button, input, textarea{
+button,
+input,
+textarea {
     outline: none;
 }
 
-button{
+button {
     cursor: pointer;
     border-radius: 16px;
 }

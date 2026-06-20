@@ -1,6 +1,6 @@
 .toggleButton{
     display: flex;
-    gap: 1rem;
+    gap: .5rem;
     padding: 0 1rem;
     align-items: center;
 }

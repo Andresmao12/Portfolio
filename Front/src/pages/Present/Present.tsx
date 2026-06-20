@@ -46,7 +46,9 @@ const Present = () => {
                 />
 
                 <span>{t('home.phrase')}</span>
-                <button type="button">{t('home.button')}</button>
+                <a href="#clients" className={styles.button}>
+                    {t('home.button')}
+                </a>
 
             </div>
         </section >

@@ -35,7 +35,7 @@
                 "year": "2025",
                 "title": "Software Technologist",
                 "company": "Institucion Universitaria ITM",
-                "description": "Expanded knowledge in software engineering, backend development, databases and modern programming practices.",
+                "description": "Strengthened expertise in backend development, databases, software architecture and modern engineering practices.",
                 "skills": [
                     "Node.js",
                     "Java",
@@ -72,7 +72,7 @@
                 "current": true,
                 "title": "Systems Engineering Student",
                 "company": "Institucion Universitaria ITM",
-                "description": "Continuously expanding knowledge in software architecture, scalable systems and modern development methodologies.",
+                "description": "Focused on software architecture, scalable systems and modern software development practices.",
                 "skills": [
                     "Software Architecture",
                     "System Design",
@@ -84,21 +84,21 @@
     "stack": {
         "badge": "Stack",
         "title": "Technology Ecosystem",
-        "description": "A collection of software, artificial intelligence and cloud technologies that I use to build modern and scalable solutions."
+        "description": "Tools, frameworks and platforms I use to design, build and deploy scalable solutions."
     },
     "clients": {
         "badge": "CLIENTS",
-        "title": "Have an Idea?",
-        "description": "Describe your project and receive an AI-powered technical assessment based on my current stack.",
+        "title": "Got an Idea?",
+        "description": "Describe your idea and get an AI-powered assessment with technical recommendations and MVP guidance.",
         "analyzer": {
             "badge": "AI ANALYZER",
-            "title": "Validate your project idea",
-            "description": "Get a quick feasibility analysis, recommended technologies and a possible MVP roadmap.",
+            "title": "Evaluate Your Idea",
+            "description": "Receive an initial assessment of feasibility, complexity, recommended technologies and a potential MVP.",
             "placeholder": "Example: I want a platform where restaurants can manage orders and customers can track deliveries in real time.",
             "button": "Analyze Project",
             "buttonAction": "Analyzing project...",
-            "errorEmptyIdea": "You should write down your idea to be analyzed",
-            "loadingDescription": "Analyzing architecture, feasibility and recommended technology stack...",
+            "errorEmptyIdea": "Please describe your idea before starting the analysis.",
+            "loadingDescription": "Evaluating requirements, complexity and recommended technology stack...",
             "results": {
                 "viability": "Viability",
                 "complexity": "Complexity",
@@ -139,7 +139,7 @@
     "projects": {
         "badge": "PROJECTS",
         "title": "Selected Work",
-        "description": "A collection of software, AI and cloud solutions built across different domains.",
+        "description": "Software, AI and cloud projects designed to solve real-world problems.",
         "challenge": "Challenge",
         "solution": "Solution",
         "impact": "Impact",
@@ -148,9 +148,9 @@
     },
     "contact": {
         "badge": "CONTACT",
-        "title": "Let's Connect",
-        "description": "Interested in software development, AI solutions, cloud technologies or collaboration opportunities.",
-        "status": "Open to opportunities",
+        "title": "Let's Talk",
+        "description": "Explore my work, discover my experience and find the best way to get in touch.",
+        "status": "Available for your next challenge",
         "actions": {
             "github": {
                 "title": "GitHub",
@@ -171,12 +171,12 @@
         },
         "form": {
             "badge": "START A CONVERSATION",
-            "description": "Tell me about your project, idea or question.",
+            "description": "Share your project, challenge or idea and let's explore how to bring it to life.",
             "name": "Your name",
             "email": "Email Address",
             "subject": "Subject",
-            "message": "Tell me about your idea, project or question...",
-            "helper": "✨ Messages may be analyzed first to determine if AI can provide an instant answer.",
+            "message": "Describe your project, challenge or idea...",
+            "helper": "✨ Your message will be reviewed first. Some inquiries may receive an AI-assisted response to help you get answers faster.",
             "button": "Send Message"
         }
     }
