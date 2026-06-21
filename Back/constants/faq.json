@@ -1,0 +1,180 @@
+[
+    {
+        "category": "about",
+        "faq": [
+            {
+                "question": [
+                    "¿Quién eres?",
+                    "Háblame de ti",
+                    "Cuéntame sobre ti",
+                    "¿Quién es Mauro?",
+                    "¿A qué te dedicas?"
+                ],
+                "answer": "Soy Mauro, Tecnólogo en Desarrollo de Software y estudiante de Ingeniería de Sistemas. Me enfoco en desarrollo Full Stack, inteligencia artificial y arquitectura de software."
+            },
+            {
+                "question": [
+                    "¿Qué estudias?",
+                    "¿Cuál es tu formación académica?",
+                    "¿Eres ingeniero?",
+                    "¿Qué carrera estudias?"
+                ],
+                "answer": "Actualmente estudio Ingeniería de Sistemas y soy Tecnólogo en Desarrollo de Software."
+            }
+        ]
+    },
+    {
+        "category": "experience",
+        "faq": [
+            {
+                "question": [
+                    "¿Dónde realizaste tus prácticas?",
+                    "¿Dónde trabajaste?",
+                    "¿Tienes experiencia profesional?",
+                    "¿Has trabajado antes?"
+                ],
+                "answer": "Realicé mis prácticas en Protección S.A., participando en iniciativas relacionadas con inteligencia artificial y automatización."
+            },
+            {
+                "question": [
+                    "¿Tienes experiencia en IA?",
+                    "¿Has trabajado con inteligencia artificial?",
+                    "¿Has participado en proyectos de IA?"
+                ],
+                "answer": "Sí. He trabajado en iniciativas relacionadas con inteligencia artificial, automatización y análisis de soluciones basadas en IA."
+            }
+        ]
+    },
+    {
+        "category": "skills",
+        "faq": [
+            {
+                "question": [
+                    "¿Qué tecnologías manejas?",
+                    "¿Cuál es tu stack tecnológico?",
+                    "¿Qué herramientas utilizas?",
+                    "¿Con qué tecnologías trabajas?"
+                ],
+                "answer": "Trabajo principalmente con React, TypeScript, JavaScript, Node.js, Express, Python, SQL Server y PostgreSQL. Puedes ver el detalle completo en la sección Stack."
+            },
+            {
+                "question": [
+                    "¿Sabes React?",
+                    "¿Trabajas con React?",
+                    "¿Tienes experiencia en React?"
+                ],
+                "answer": "Sí. React es una de mis tecnologías principales para el desarrollo frontend."
+            },
+            {
+                "question": [
+                    "¿Sabes TypeScript?",
+                    "¿Utilizas TypeScript?",
+                    "¿Trabajas con TypeScript?"
+                ],
+                "answer": "Sí. Utilizo TypeScript en la mayoría de mis proyectos frontend y backend para mejorar la mantenibilidad y robustez del código."
+            },
+            {
+                "question": [
+                    "¿Trabajas con bases de datos?",
+                    "¿Qué bases de datos manejas?",
+                    "¿Tienes experiencia en SQL?"
+                ],
+                "answer": "Tengo experiencia trabajando con PostgreSQL y SQL Server, incluyendo diseño de bases de datos, consultas, procedimientos almacenados y optimización."
+            }
+        ]
+    },
+    {
+        "category": "projects",
+        "faq": [
+            {
+                "question": [
+                    "¿Los proyectos del portafolio son reales?",
+                    "¿Has desarrollado esos proyectos?",
+                    "¿Son proyectos personales?"
+                ],
+                "answer": "Sí. Los proyectos mostrados representan experiencias reales de aprendizaje, práctica profesional y desarrollo personal."
+            },
+            {
+                "question": [
+                    "¿Puedo ver el código fuente?",
+                    "¿Tienes GitHub?",
+                    "¿Dónde están tus repositorios?",
+                    "¿El código es público?"
+                ],
+                "answer": "Los proyectos que tienen repositorio público incluyen enlaces directos a GitHub para que puedas revisar su implementación."
+            }
+        ]
+    },
+    {
+        "category": "services",
+        "faq": [
+            {
+                "question": [
+                    "¿Trabajas freelance?",
+                    "¿Aceptas proyectos freelance?",
+                    "¿Puedo contratarte?",
+                    "¿Trabajas por proyecto?"
+                ],
+                "answer": "Sí. Estoy abierto a colaboraciones freelance y proyectos tecnológicos que representen un reto interesante."
+            },
+            {
+                "question": [
+                    "¿Trabajas remoto?",
+                    "¿Aceptas trabajo remoto?",
+                    "¿Puedes trabajar para empresas extranjeras?"
+                ],
+                "answer": "Sí. Estoy abierto a oportunidades remotas, híbridas o presenciales según el proyecto."
+            },
+            {
+                "question": [
+                    "¿Qué servicios ofreces?",
+                    "¿Qué tipo de proyectos desarrollas?",
+                    "¿En qué puedes ayudarme?"
+                ],
+                "answer": "Puedo participar en el desarrollo de aplicaciones web, APIs, soluciones Full Stack, automatizaciones y proyectos relacionados con inteligencia artificial."
+            }
+        ]
+    },
+    {
+        "category": "availability",
+        "faq": [
+            {
+                "question": [
+                    "¿Estás buscando trabajo?",
+                    "¿Estás disponible para trabajar?",
+                    "¿Buscas empleo?"
+                ],
+                "answer": "Estoy abierto a oportunidades que me permitan seguir creciendo como desarrollador Full Stack y profesional de tecnología."
+            },
+            {
+                "question": [
+                    "¿Podemos colaborar en un proyecto?",
+                    "¿Aceptas colaboraciones?",
+                    "¿Te interesa participar en proyectos?"
+                ],
+                "answer": "Sí. Puedes enviarme los detalles mediante el formulario de contacto y con gusto revisaré la propuesta."
+            }
+        ]
+    },
+    {
+        "category": "contact",
+        "faq": [
+            {
+                "question": [
+                    "¿Cuánto tardas en responder?",
+                    "¿Cuál es tu tiempo de respuesta?",
+                    "¿Cuándo responderás mi mensaje?"
+                ],
+                "answer": "Intento responder todos los mensajes lo antes posible, normalmente dentro de las siguientes 24 a 48 horas."
+            },
+            {
+                "question": [
+                    "¿Cuál es la mejor forma de contactarte?",
+                    "¿Cómo puedo comunicarme contigo?",
+                    "¿Dónde puedo encontrarte?"
+                ],
+                "answer": "Puedes utilizar el formulario de contacto del portafolio o visitar mis perfiles profesionales enlazados en esta página."
+            }
+        ]
+    }
+]
