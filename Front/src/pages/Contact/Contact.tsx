@@ -19,9 +19,41 @@ const Contact = () => {
         message: ''
     });
 
+    const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+
+        if (
+            !formData.name ||
+            !formData.email ||
+            !formData.message
+        ) {
+            setStatus('error');
+            return;
+        }
+
+        try {
+            setStatus('loading');
+
+            await new Promise(resolve =>
+                setTimeout(resolve, 1500)
+            );
+
+            setStatus('success');
+
+            setFormData({
+                name: '',
+                email: '',
+                subject: '',
+                message: ''
+            });
+
+        } catch {
+            setStatus('error');
+        }
     };
+
 
     const handleChange = (field: keyof typeof formData, value: string) => {
         setFormData(prev => ({ ...prev, [field]: value }));
@@ -104,12 +136,17 @@ const Contact = () => {
                         type='textArea'
                         onChange={(value) => handleChange('message', value)}
                     />
-                    
+
                 </div>
 
                 <div className={styles.footer}>
                     <span className={styles.helper}>{t('contact.form.helper')}</span>
-                    <button type="submit" className={styles.submitButton}>{t('contact.form.button')}</button>
+                    <button disabled={status === 'loading'} className={styles.submitButton}>
+                        {status === 'loading'
+                            ? t('contact.form.sending')
+                            : t('contact.form.button')
+                        }
+                    </button>
                 </div>
             </form>
         </section>
