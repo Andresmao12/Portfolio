@@ -5,59 +5,63 @@ import { useTranslation } from 'react-i18next';
 
 import Header from '../../components/Header/Header';
 import InputLabel from '../../components/InputLabel/InputLabel';
+import ContactFaqModal from '../../components/ContactFaqModal/ContactFaqModal';
 
 import { contactItems } from '../../constants/contact';
+
+import { useApi } from '../../hooks/useApiContact';
+import { useFaqFlow } from '../../hooks/useFaqFlow';
+
+export interface FaqFeedback {
+    question: string;
+    faqCategory: string;
+    resolved: boolean;
+}
 
 const Contact = () => {
 
     const { t } = useTranslation();
 
+    const { createMessage, sendFeedback, loading, error, success, data } = useApi()
+    const { openFaqModal, closeFaqModal, resolveFaq, sendAnyway, faqModalOpen } = useFaqFlow({ createMessage, sendFeedback })
+
     const [formData, setFormData] = useState({
         name: '',
         email: '',
         subject: '',
-        message: ''
+        message: '',
+        forceSend: false
     });
-
-    const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
 
-        if (
-            !formData.name ||
-            !formData.email ||
-            !formData.message
-        ) {
-            setStatus('error');
+        try {
+            const response = await createMessage(formData)
+            if (response?.data?.isFaq) openFaqModal();
+
+        } catch (e) {
+            console.log("Error: ", e);
             return;
         }
-
-        try {
-            setStatus('loading');
-
-            await new Promise(resolve =>
-                setTimeout(resolve, 1500)
-            );
-
-            setStatus('success');
-
-            setFormData({
-                name: '',
-                email: '',
-                subject: '',
-                message: ''
-            });
-
-        } catch {
-            setStatus('error');
-        }
     };
 
+    const handleChange = (field: keyof typeof formData, value: string) => setFormData(prev => ({ ...prev, [field]: value }));
 
-    const handleChange = (field: keyof typeof formData, value: string) => {
-        setFormData(prev => ({ ...prev, [field]: value }));
-    };
+    const handleResetData = () => setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        message: '',
+        forceSend: false
+    })
+
+
+    const handleResolved = async () => resolveFaq({ question: formData.message, faqCategory: data?.faqCategory, resetForm: handleResetData })
+
+    const handleSendAnyway = async () => sendAnyway({ formData: formData, faqCategory: data?.faqCategory })
+
+
 
     return (
         <section id="contact" className={styles.contactSection}>
@@ -111,6 +115,7 @@ const Contact = () => {
 
                     <InputLabel
                         id='name'
+                        value={formData.name}
                         label={t('contact.form.name')}
                         type='input'
                         onChange={(value) => handleChange('name', value)}
@@ -118,6 +123,7 @@ const Contact = () => {
 
                     <InputLabel
                         id='email'
+                        value={formData.email}
                         label={t('contact.form.email')}
                         type='email'
                         onChange={(value) => handleChange('email', value)}
@@ -125,6 +131,7 @@ const Contact = () => {
 
                     <InputLabel
                         id='subject'
+                        value={formData.subject}
                         label={t('contact.form.subject')}
                         type='input'
                         onChange={(value) => handleChange('subject', value)}
@@ -132,6 +139,7 @@ const Contact = () => {
 
                     <InputLabel
                         id='message'
+                        value={formData.message}
                         label={t('contact.form.message')}
                         type='textArea'
                         onChange={(value) => handleChange('message', value)}
@@ -141,14 +149,27 @@ const Contact = () => {
 
                 <div className={styles.footer}>
                     <span className={styles.helper}>{t('contact.form.helper')}</span>
-                    <button disabled={status === 'loading'} className={styles.submitButton}>
-                        {status === 'loading'
-                            ? t('contact.form.sending')
-                            : t('contact.form.button')
-                        }
+                    <button disabled={loading} className={styles.submitButton}>
+
+                        {(!loading && !success && !error) && t('contact.form.button')}
+
+                        {loading && t('contact.form.sending')}
+                        {success && t('contact.form.success')}
+                        {error && `${t('contact.form.error')}: ${error}`}
                     </button>
                 </div>
             </form>
+
+            <ContactFaqModal
+                open={faqModalOpen}
+                name={formData.name}
+                answer={data?.answer}
+                onResolved={handleResolved}
+                onSendAnyway={handleSendAnyway}
+                onClose={closeFaqModal}
+            />
+
+
         </section>
     );
 };

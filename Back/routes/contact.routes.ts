@@ -1,8 +1,9 @@
 import { Router } from 'express';
-import { sendContactEmail } from '../controllers/contact.controller';
+import { sendContactEmail, sendFeedback } from '../controllers/contact.controller';
 
-const router = Router();
+const contactRouter = Router();
 
-router.post('/', sendContactEmail);
+contactRouter.post('/', sendContactEmail);
+contactRouter.post('/feedback', sendFeedback);
 
-export default router;
+export default contactRouter;

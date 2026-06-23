@@ -6,11 +6,12 @@ interface InputLabelProps {
     id: string,
     label: string,
     type: types,
+    value: string,
     onChange: (value: string) => void,
     required?: boolean
 }
 
-const InputLabel = ({ id, label, type, onChange, required = true }: InputLabelProps) => {
+const InputLabel = ({ id, label, type, value, onChange, required = true }: InputLabelProps) => {
 
     return <div className={styles.field}>
 

@@ -1,0 +1,72 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    width: min(100%, 600px);
+}
+
+.container h2 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+
+.answerBox {
+    max-height: 250px;
+    padding: 1.25rem;
+    border-radius: 16px;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-card);
+    line-height: 1.7;
+    color: var(--text);
+}
+
+.actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.actions button {
+    border: none;
+    cursor: pointer;
+    padding: 0.9rem 1.4rem;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.actions button:first-child {
+    background: var(--success);
+    color: var(--text);
+}
+
+.actions button:first-child:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.05);
+}
+
+.actions button:last-child {
+    background: var(--button-neutral);
+    color: var(--button-secondary-text);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.actions button:last-child:hover {
+    background: rgba(255, 255, 255, 0.12);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 980px) {
+    .actions {
+        flex-direction: column;
+    }
+
+    .actions button {
+        width: 100%;
+    }
+}

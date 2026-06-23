@@ -203,3 +203,95 @@
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.faqModal {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    max-width: 600px;
+}
+
+.faqModal h2 {
+    font-size: 1.8rem;
+}
+
+.faqModal p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.answerBox {
+    padding: 1.25rem;
+
+    border-radius: 16px;
+
+    background: rgba(255, 255, 255, 0.04);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    line-height: 1.8;
+}
+
+.question {
+    text-align: center;
+    font-weight: 600;
+}
+
+.modalActions {
+    display: flex;
+    gap: 1rem;
+}
+
+.modalActions button {
+    flex: 1;
+}
+
+.successButton {
+    padding: 1rem;
+
+    border: none;
+
+    border-radius: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.successButton:hover {
+    transform: translateY(-2px);
+}
+
+.sendButton {
+    padding: 1rem;
+
+    border-radius: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.sendButton:hover {
+    transform: translateY(-2px);
+}

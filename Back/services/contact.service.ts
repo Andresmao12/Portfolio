@@ -28,6 +28,7 @@ export const aiValidate = async (message: string): Promise<AiResponse> => {
         7. Si la información es insuficiente o existe duda razonable, responde isFaq=false.
         8. Si respondes isFaq=true:
         - genera una respuesta natural y amigable.
+        - comienza la respuesta con algo similar a "creo que tengo la respuesta a tu pregunta" o "justamente creo q tengo la respuesta" dandole un tono de humor
         - puedes usar uno o dos emojis relevantes.
         - utiliza únicamente información presente en las FAQs.
         - agrega la categoria con la que encontraste coincidencias.
@@ -44,7 +45,7 @@ export const aiValidate = async (message: string): Promise<AiResponse> => {
         {
             "isFaq": boolean,
             "faqCategory"?: string,
-            "answer"?: string
+            "answer"?: string,
         }
 
         No agregues explicaciones.
@@ -57,7 +58,7 @@ export const aiValidate = async (message: string): Promise<AiResponse> => {
         const ai = new GoogleGenAI({});
 
         const response = await ai.models.generateContent({
-            model: "gemini-3.5-flash",
+            model: "gemini-2.5-flash",
             contents: PROMPT,
         });
         console.log(`--- PROMPT: ${PROMPT}`)
