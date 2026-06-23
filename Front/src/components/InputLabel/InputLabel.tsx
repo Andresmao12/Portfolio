@@ -19,6 +19,7 @@ const InputLabel = ({ id, label, type, value, onChange, required = true }: Input
             type="text"
             id={id}
             name={id}
+            value={value}
             placeholder=" "
             required={required}
             onChange={(e) => onChange(e.target.value)}
@@ -28,6 +29,7 @@ const InputLabel = ({ id, label, type, value, onChange, required = true }: Input
             type="email"
             id={id}
             name={id}
+            value={value}
             placeholder=" "
             required={required}
             onChange={(e) => onChange(e.target.value)}
@@ -36,6 +38,7 @@ const InputLabel = ({ id, label, type, value, onChange, required = true }: Input
         {type == 'textArea' && <textarea
             id={id}
             name={id}
+            value={value}
             rows={6}
             placeholder=" "
             required={required}
