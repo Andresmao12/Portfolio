@@ -40,6 +40,7 @@
 
     /* Buttons */
     --button-primary-bg: var(--brand-primary);
+    --button-primary-hover: var(--brand-secondary);
     --button-primary-text: var(--text);
 
     --button-secondary-bg: var(--brand-dark);

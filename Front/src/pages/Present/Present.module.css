@@ -80,11 +80,11 @@
 html[class="light"] .rightContainer::before {
     background: linear-gradient(to right,
             var(--bg-page) 0%,
-            rgba(246, 247, 251, 0.90) 15%,
-            rgba(246, 247, 251, 0.70) 30%,
-            rgba(246, 247, 251, 0.55) 45%,
-            rgba(246, 247, 251, 0.35) 60%,
-            rgba(246, 247, 251, 0.10) 75%,
+            rgba(246, 247, 251, 0.90) 5%,
+            rgba(246, 247, 251, 0.70) 10%,
+            rgba(246, 247, 251, 0.55) 20%,
+            rgba(246, 247, 251, 0.35) 30%,
+            rgba(246, 247, 251, 0.10) 50%,
             rgba(246, 247, 251, 0) 90%);
 }
 
@@ -136,5 +136,16 @@ html[class="light"] .rightContainer::before {
                     rgba(0, 0, 17, 0.7) 20%,
                     rgba(0, 0, 17, 0) 45%);
         }
+    }
+
+    html[class="light"] .rightContainer::before {
+        background: linear-gradient(to right,
+                var(--bg-page) 0%,
+                rgba(246, 247, 251, 0.90) 5%,
+                rgba(246, 247, 251, 0.70) 20%,
+                rgba(246, 247, 251, 0.55) 35%,
+                rgba(246, 247, 251, 0.35) 50%,
+                rgba(246, 247, 251, 0.10) 70%,
+                rgba(246, 247, 251, 0) 90%);
     }
 }

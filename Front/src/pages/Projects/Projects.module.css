@@ -177,9 +177,8 @@
     padding: .8rem 1rem;
 
     border-radius: 12px;
-    color: var(--text);
-
-    background: var(--button-card);
+    color: var(--button-primary-text);
+    background: var(--button-primary-bg);
 
     transition:
         background .25s ease,
@@ -187,9 +186,15 @@
 }
 
 .actions a:hover {
-    background: var(--button-card);
+    background: var(--button-primary-hover);
     transform: translateY(-2px);
 }
+
+/* html[class="light"] .actions a {
+    background-color: ;
+    color: var(--text-inverse);
+
+} */
 
 /* RESPONSIVE */
 @media (max-width: 900px) {

@@ -10,7 +10,7 @@ import LanguageToggle from '../LanguageToggle/LanguageToggle';
 const Nav = () => {
 
     const [open, setOpen] = useState(false);
-    
+
     const { t } = useTranslation()
 
     const items = [
@@ -83,13 +83,9 @@ const Nav = () => {
                 ☰
             </button>
 
-            <div
-                className={`${styles.mobileMenu} ${open ? styles.open : ''
-                    }`}
-            >
+            <div className={`${styles.mobileMenu} ${open ? styles.open : ''}`}>
 
                 {items.map((item) => (
-
                     <a
                         key={item.href}
                         href={item.href}

@@ -1,6 +1,14 @@
-.toggleButton{
+.toggleButton {
     display: flex;
     gap: .5rem;
     padding: 0 1rem;
     align-items: center;
+}
+
+@media (max-width:980px) {
+
+    .toggleButton {
+        padding: 1rem;
+    }
+
 }
