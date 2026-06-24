@@ -45,6 +45,8 @@ const Clients = () => {
 
     const handleAnalyze = async () => {
 
+        setValidationError('');
+
         if (!idea.trim()) {
             setValidationError(t('clients.analyzer.errorEmptyIdea'));
             return;
@@ -87,6 +89,12 @@ const Clients = () => {
                         value={idea}
                         onChange={(e) => setIdea(e.target.value)}
                     />
+
+                    {validationError && (
+                        <span className={styles.errorMessage}>
+                            {validationError}
+                        </span>
+                    )}
 
                     {error && (
                         <span className={styles.errorMessage}>
