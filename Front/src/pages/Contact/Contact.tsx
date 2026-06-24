@@ -41,7 +41,7 @@ const Contact = () => {
             if (response?.data?.isFaq) openFaqModal();
 
         } catch (e) {
-            console.log("Error: ", e);
+            console.log(e);
             return;
         }
     };

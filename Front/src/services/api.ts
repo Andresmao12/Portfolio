@@ -15,11 +15,13 @@ export const post = async ({ endpoint, data }: postParameters) => {
             body: JSON.stringify(data),
         })
 
-        if (!res.ok) throw new Error(`-- Error en la respuesta ${res.status} ${res.statusText}`);
+        const result = await res.json();
 
-        return await res.json()
+        if (!res.ok) throw new Error(result.message || 'Unknown error');;
+
+        return result
 
     } catch (error) {
-        return error
+        throw error
     }
 }

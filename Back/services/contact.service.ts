@@ -10,8 +10,6 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export const aiValidate = async (message: string): Promise<AiResponse> => {
 
-    console.log("Stringify FAQS: ", JSON.stringify(faqs))
-
     const PROMPT = `
         Eres un agente especializado en clasificar preguntas frecuentes para un portafolio profesional.
 
@@ -58,35 +56,37 @@ export const aiValidate = async (message: string): Promise<AiResponse> => {
         const ai = new GoogleGenAI({});
 
         const response = await ai.models.generateContent({
-            model: "gemini-2.5-flash",
+            model: "gemini-3.1-flash-lite",
             contents: PROMPT,
         });
         console.log(`--- PROMPT: ${PROMPT}`)
         console.log(`--- RESPONSE: ${response.text}`);
 
         const result = JSON.parse(response.text || '{}') as AiResponse;
+
         return result;
 
     } catch (error) {
-        console.error('Gemini error:', error);
-        throw new Error('AI validation failed');
+        console.log('-- SPECIFIC ERROR: ', error)
+        throw error;
     }
 }
 
 
 export const sendEmail = async ({ name, email, subject, message }: ContactEmail) => {
 
-    await resend.emails.send({
+    try {
 
-        from: 'Portfolio <onboarding@resend.dev>',
+        await resend.emails.send({
 
-        to: process.env.RECEIVER_EMAIL!,
+            from: 'Portfolio contact <onboarding@resend.dev>',
 
-        subject,
+            to: process.env.RECEIVER_EMAIL!,
 
-        html: `
-            <h2>Nuevo mensaje</h2>
+            subject,
 
+            html: `
+            
             <p><strong>Nombre:</strong> ${name}</p>
 
             <p><strong>Email:</strong> ${email}</p>
@@ -95,5 +95,10 @@ export const sendEmail = async ({ name, email, subject, message }: ContactEmail)
 
             <p>${message}</p>
         `
-    });
+        });
+
+    } catch (error) {
+        console.log('-- SPECIFIC ERROR: ', error)
+        throw error;
+    }
 };

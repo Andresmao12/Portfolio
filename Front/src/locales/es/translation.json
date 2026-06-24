@@ -179,8 +179,8 @@
             "helper": "✨ El mensaje primero sera analizado, algunas consultas pueden recibir una respuesta inicial asistida por IA para agilizar el proceso.",
             "button": "Enviar Mensaje",
             "sending": "Enviando...",
-            "success": "Mensaje enviado correctamente",
-            "error": "Ocurrió un error, intenta nuevamente"
+            "success": "Enviado correctamente",
+            "error": "Ocurrió un error"
         }
     }
 }

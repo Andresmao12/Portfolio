@@ -38,11 +38,16 @@ export const sendContactEmail = async (req: Request, res: Response<ApiResponse<A
 
     } catch (error) {
 
-        console.error(error);
+        if (error instanceof Error && error.message.includes('503')) {
+            return res.status(503).json({
+                status: 'error',
+                message: 'The AI is temporarily busy. Try again in a few minutes.'
+            });
+        }
 
         return res.status(500).json({
             status: "error",
-            message: `Error: ${error}`
+            message: "unknow error"
         });
     }
 };
@@ -51,14 +56,14 @@ export const sendFeedback = (req: Request, res: Response<any>) => {
     try {
         const { question, faqCategory = null, resolved } = req.body;
 
-        if (!question || !resolved) {
+        if (!question) {
             return res.status(400).json({
                 status: 'error',
                 message: 'Missing fields'
             });
         }
 
-        //    LOGICA PARA GUARDAR FEEDBACK, DEFINIR DONDE ALMACENAR
+        // LOGICA PARA GUARDAR FEEDBACK, DEFINIR DONDE ALMACENAR
 
         return res.status(200).json({
             status: 'success',
@@ -66,12 +71,9 @@ export const sendFeedback = (req: Request, res: Response<any>) => {
         });
 
     } catch (error) {
-
-        console.error(error);
-
         return res.status(500).json({
             status: "error",
-            message: `Error: ${error}`
+            message: "Unknow error"
         });
     }
 }

@@ -16,14 +16,12 @@ const Projects = () => {
 
         if (!projects[i]?.featured && !projects[i - 1]?.featured) {
 
-            console.log('Entramos al if')
             projects[i - 1].refill = true;
             projects[i].refill = true;
         }
     }
 
-    console.log(projects)
-
+    
     return (
         <section id="projects" className={styles.projectsSection}>
 

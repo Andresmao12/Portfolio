@@ -6,7 +6,7 @@ import type { ContactEmail, ApiResponse, AiResponse, FaqFeedback } from "../inte
 export const useApi = () => {
 
     const [loading, setLoading] = useState(false);
-    const [error, setError] = useState<string | null>(null);
+    const [error, setError] = useState<any | null>(null);
     const [success, setSuccess] = useState<boolean | null>(null);
     const [data, setData] = useState<AiResponse | null>(null)
 
@@ -21,8 +21,11 @@ export const useApi = () => {
             const result = await post({ endpoint: "contact", data }) as ApiResponse<AiResponse>;
 
             if (result.status == "success" && result.data?.isFaq) {
-                setSuccess(true)
                 setData(result.data)
+
+            } else if (result.status == "success" && result.data && !result.data?.isFaq) {
+                setData(result.data)
+                setSuccess(true)
             }
 
             return result;
@@ -39,7 +42,14 @@ export const useApi = () => {
 
 
     const sendFeedback = async (data: FaqFeedback) => {
-        return post({ endpoint: 'contact/feedback', data });
+
+        try {
+            return post({ endpoint: 'contact/feedback', data });
+
+        } catch (error) {
+            console.error('Error sending feedback:', error);
+            throw error;
+        }
     }
 
 
