@@ -3,7 +3,7 @@ import { post } from "../services/api";
 
 import type { ContactEmail, ApiResponse, AiResponse, FaqFeedback } from "../interfaces/contact.interface";
 
-export const useApi = () => {
+export const useApiContact = () => {
 
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<any | null>(null);

@@ -9,7 +9,7 @@ import ContactFaqModal from '../../components/ContactFaqModal/ContactFaqModal';
 
 import { contactItems } from '../../constants/contact';
 
-import { useApi } from '../../hooks/useApiContact';
+import { useApiContact } from '../../hooks/useApiContact';
 import { useFaqFlow } from '../../hooks/useFaqFlow';
 
 export interface FaqFeedback {
@@ -22,7 +22,7 @@ const Contact = () => {
 
     const { t } = useTranslation();
 
-    const { createMessage, sendFeedback, loading, error, success, data } = useApi()
+    const { createMessage, sendFeedback, loading, error, success, data } = useApiContact()
     const { openFaqModal, closeFaqModal, resolveFaq, sendAnyway, faqModalOpen } = useFaqFlow({ createMessage, sendFeedback })
 
     const [formData, setFormData] = useState({

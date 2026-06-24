@@ -3,8 +3,14 @@ import styles from './Clients.module.css';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import i18n from '../../services/i18n';
+
 import Header from '../../components/Header/Header';
 import ReflectiveCard from '../../components/ReactBits/ReflectiveCard/ReflectiveCard';
+import AnalyserResult from '../../components/AnalizerReslut/AnalizerResult'
+
+import { useApiAnalyzer } from '../../hooks/useApiAnalyzer';
+
 
 //? TEMPORAL
 const testimonials = [
@@ -30,53 +36,27 @@ const testimonials = [
 
 const Clients = () => {
 
-    type ErrorType = { message?: string }
-
     const [idea, setIdea] = useState('');
-    const [loading, setLoading] = useState(false);
-    const [analysis, setAnalysis] = useState<any>(null);
-    const [error, setError] = useState<ErrorType>({});
+    const [validationError, setValidationError] = useState('');
+
+    const { analyze, loading, analysis, error } = useApiAnalyzer();
 
     const { t } = useTranslation()
 
     const handleAnalyze = async () => {
 
         if (!idea.trim()) {
-            setError({ message: t('clients.analyzer.errorEmptyIdea') });
-            return
+            setValidationError(t('clients.analyzer.errorEmptyIdea'));
+            return;
         }
 
-        setError({})
-        setLoading(true);
-
-        // simulamos llamada IA
-
-        setTimeout(() => {
-
-            setAnalysis({
-                viability: '92%',
-                complexity: 'Medium',
-                timeline: '6 Weeks',
-                stack: [
-                    'React',
-                    'TypeScript',
-                    'Node.js',
-                    'PostgreSQL',
-                    'AWS'
-                ],
-                mvp: [
-                    'Authentication',
-                    'Admin Dashboard',
-                    'Analytics',
-                    'AI Assistant'
-                ]
-            });
-
-            setLoading(false);
-
-        }, 2500);
-
+        try {
+            await analyze({ idea, language: i18n.language });
+        } catch (error) {
+            console.error(error);
+        }
     };
+
 
     return (
         <section id='clients' className={styles.clientsSection}>
@@ -108,7 +88,11 @@ const Clients = () => {
                         onChange={(e) => setIdea(e.target.value)}
                     />
 
-                    {error.message && <span className={styles.errorMessage}>{error.message}</span>}
+                    {error && (
+                        <span className={styles.errorMessage}>
+                            {error}
+                        </span>
+                    )}
 
                     <button type='button'
                         className={styles.analyzeButton}
@@ -127,68 +111,7 @@ const Clients = () => {
 
                     )}
 
-                    {/* RESULT */}
-                    {analysis && !loading && (
-
-                        <div className={styles.analysisResult}>
-
-                            <div className={styles.statsGrid}>
-
-                                <article className={styles.statCard}>
-                                    <small>{t('clients.analyzer.results.viability')}</small>
-                                    <strong>{analysis.viability}</strong>
-                                </article>
-
-                                <article className={styles.statCard}>
-                                    <small>{t('clients.analyzer.results.complexity')}</small>
-                                    <strong>{analysis.complexity}</strong>
-                                </article>
-
-                                <article className={styles.statCard}>
-                                    <small>{t('clients.analyzer.results.timeline')}</small>
-                                    <strong>{analysis.timeline}</strong>
-                                </article>
-
-                            </div>
-
-                            <div className={styles.resultBlock}>
-
-                                <h4>{t('clients.analyzer.results.recommendedStack')}</h4>
-
-                                <div className={styles.tags}>
-
-                                    {analysis.stack.map((item: string) => (
-                                        <span key={item}> {item}</span>
-                                    ))}
-
-                                </div>
-                            </div>
-
-                            <div className={styles.resultBlock}>
-                                <h4>{t('clients.analyzer.results.suggestedMvp')}</h4>
-
-                                <ul>
-                                    {analysis.mvp.map((item: string) => (
-                                        <li key={item}>{item}</li>
-                                    ))}
-                                </ul>
-
-                            </div>
-
-                            <button
-                                className={styles.buildButton}
-                                onClick={() =>
-                                    document
-                                        .getElementById('contact')
-                                        ?.scrollIntoView({
-                                            behavior: 'smooth'
-                                        })
-                                }
-                            >
-                                {t('clients.analyzer.results.buildButton')}
-                            </button>
-                        </div>
-                    )}
+                    {analysis && !loading && (<AnalyserResult analysis={analysis} loading={loading} />)}
                 </div>
 
             </article>

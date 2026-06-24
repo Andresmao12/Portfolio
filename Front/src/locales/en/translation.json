@@ -104,7 +104,10 @@
                 "complexity": "Complexity",
                 "timeline": "Timeline",
                 "recommendedStack": "Recommended Stack",
+                "estimatedCost": "Estimated Cost",
+                "costDetails": "Cost Breakdown",
                 "suggestedMvp": "Suggested MVP",
+                "roadmap": "Roadmap",
                 "buildButton": "Let's Build This"
             }
         },

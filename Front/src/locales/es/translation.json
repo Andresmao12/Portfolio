@@ -113,8 +113,11 @@
                 "viability": "Viabilidad",
                 "complexity": "Complejidad",
                 "timeline": "Tiempo estimado",
+                "estimatedCost": "Costo estimado",
+                "costDetails": "Justificación del costo",
                 "recommendedStack": "Tecnologías recomendadas",
                 "suggestedMvp": "MVP recomendado",
+                "roadmap": "Roadmap",
                 "buildButton": "Hablemos de tu proyecto"
             }
         },

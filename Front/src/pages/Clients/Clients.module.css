@@ -62,8 +62,7 @@
 
 
 /* BUTTONS */
-.analyzeButton,
-.buildButton {
+.analyzeButton {
     padding: .6rem .3rem;
     border-radius: 16px;
 
@@ -79,17 +78,9 @@
     color: var(--button-primary-text);
 }
 
-.buildButton {
-    background: var(--button-neutral);
-    color: var(--button-primary-text);
 
-    &:hover {
-        background-color: var(--button-neutral-hover);
-    }
-}
 
-.analyzeButton:hover,
-.buildButton:hover {
+.analyzeButton:hover {
     transform: translateY(-2px);
 }
 
@@ -130,73 +121,6 @@
     }
 }
 
-/* RESULT */
-
-.analysisResult {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-
-    padding-top: 1.5rem;
-
-    border-top: 1px solid var(--border-card);
-}
-
-.statsGrid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-}
-
-.statCard {
-    padding: 1rem;
-
-    border-radius: 20px;
-    background: var(--bg-surface);
-    border: 1px solid var(--border-card);
-
-    display: flex;
-    flex-direction: column;
-    gap: .5rem;
-}
-
-.statCard strong {
-    font-size: 1.5rem;
-}
-
-.resultBlock {
-    display: flex;
-    flex-direction: column;
-    gap: .8rem;
-}
-
-.resultBlock h4 {
-    font-size: 1rem;
-}
-
-.resultBlock ul {
-    padding-left: 1rem;
-
-    display: flex;
-    flex-direction: column;
-    gap: .5rem;
-}
-
-
-/* TAGS */
-.tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: .5rem;
-}
-
-.tags span {
-    padding: .45rem .85rem;
-
-    border-radius: 999px;
-    background: rgba(255, 255, 255, .04);
-    border: 1px solid rgba(255, 255, 255, .08);
-}
 
 .loaderContainer {
     padding: 2rem 0;
@@ -216,6 +140,7 @@
     border-top-color: var(--brand-primary);
     animation: spin .8s linear infinite;
 }
+
 
 @keyframes spin {
 
