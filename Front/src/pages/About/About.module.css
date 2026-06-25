@@ -8,7 +8,7 @@
 
 
 .header {
-    max-width: 850px;
+    /* max-width: 850px; */
 
     & .badge {
         font-size: inherit;
@@ -61,7 +61,7 @@
     object-fit: cover;
     object-position: right center;
 
-    border-radius: 32px;
+    border-radius: 32px 32px 0;
     border: 1px solid var(--border-card);
 }
 
@@ -74,8 +74,7 @@
     flex-direction: column;
     gap: 2rem;
 
-    border-top: 1px solid var(--border-card);
-    border-bottom: 1px solid var(--border-card);
+     border-top: 1px solid var(--border-card);
 }
 
 .servicesPreview h3 {
@@ -106,9 +105,9 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 3rem;
 
-    padding-top: 3rem;
-
+    padding: 3rem 0;
     border-top: 1px solid var(--border-card);
+
 }
 
 .valuesSection strong {
@@ -117,9 +116,10 @@
     opacity: .15;
 }
 
-.valuesSection h3 {
-    margin-top: .5rem;
-    margin-bottom: 1rem;
+.valuesSection div {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
 }
 
 .valuesSection p {

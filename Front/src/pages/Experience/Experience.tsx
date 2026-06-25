@@ -2,7 +2,9 @@ import styles from './Experience.module.css';
 
 import { useTranslation } from 'react-i18next';
 
-import Threads from '../../components/ReactBits/ThreadsBackground/Threads';
+import { lazy, Suspense } from 'react';
+const Threads = lazy(() => import('../../components/ReactBits/ThreadsBackground/Threads'));
+import ErrorBoundary from '../../components/ErrorBoundary/ErrorBoundary';
 
 import ExperienceCard from '../../components/ExperienceCard/ExperienceCard';
 import Header from '../../components/Header/Header';
@@ -53,7 +55,11 @@ const Experience = () => {
                 ))}
 
                 <div className={styles.backgroundContainer} aria-hidden>
-                    <Threads amplitude={1} distance={0} />
+                    <ErrorBoundary fallback={<div className={styles.fallbackBackground} />}>
+                        <Suspense fallback={<div className={styles.fallbackBackground} />}>
+                            <Threads amplitude={1} distance={0} />
+                        </Suspense>
+                    </ErrorBoundary>
                 </div>
 
             </div>

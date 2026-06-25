@@ -50,7 +50,8 @@ const About = () => {
 
                 </div>
 
-            </div>            <div className={styles.valuesSection}>
+            </div>
+            <div className={styles.valuesSection}>
 
                 <div>
                     <strong>01</strong>
