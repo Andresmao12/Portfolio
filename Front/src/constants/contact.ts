@@ -22,12 +22,6 @@ export const contactItems = [
         key: 'resume',
         icon: FaFileDownload,
         color: '#8B5CF6',
-        href: '/cv.pdf'
-    },
-    {
-        key: 'email',
-        icon: FaEnvelope,
-        color: '#22C55E',
-        href: 'mailto:correo@correo.com'
+        href: 'docs/hv.pdf'
     }
 ] as const;
