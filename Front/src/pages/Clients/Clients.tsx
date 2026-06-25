@@ -25,12 +25,6 @@ const testimonials = [
         company: 'Retail Company',
         feedback:
             'The AI proposal helped us validate the project before investing resources.'
-    },
-    {
-        name: 'Product Manager',
-        company: 'Tech Startup',
-        feedback:
-            'Clear architecture, realistic roadmap and great understanding of the requirements.'
     }
 ];
 
@@ -134,6 +128,11 @@ const Clients = () => {
                 </Header>
 
                 <div className={styles.feedbackGrid}>
+                    <article className={styles.firstClientCard}>
+                        <strong>{t('clients.feedback.firstClient.title')}</strong>
+                        <p>{t('clients.feedback.firstClient.description')}</p>
+                        <span>{t('clients.feedback.firstClient.cta')}</span>
+                    </article>
 
                     {testimonials.map((item) => (
                         <article key={item.feedback} className={styles.feedbackCard}>

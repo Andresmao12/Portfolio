@@ -15,6 +15,38 @@
         "phrase": "Software Developer & AI Enthusiast",
         "button": "Go!"
     },
+    "about": {
+        "badge": "Why Work With Me",
+        "title": "Building digital products focused on real results",
+        "lead": "I don't just build software. I help transform ideas into real products that create value for people and businesses.",
+        "storyTitle": "More than code, a product mindset",
+        "story1": "I am a software development technologist and a systems engineering student. Over the past few years, I have been building applications, exploring artificial intelligence, and contributing to projects designed to solve real-world problems.",
+        "story2": "I enjoy working closely with the people behind every project. Before writing a single line of code, I focus on understanding the problem, the users involved, and the expected outcome.",
+        "story3": "My goal is to create solutions that are simple, scalable, and useful. Every project is an opportunity to learn, improve, and build long-term trust.",
+        "servicesTitle": "What I Can Help You Build",
+        "services": {
+            "mvp": "MVPs to validate ideas",
+            "web": "Web applications",
+            "automation": "Process automation",
+            "ai": "AI solutions",
+            "internal": "Internal tools",
+            "analytics": "Dashboards & analytics"
+        },
+        "values": {
+            "businessFocus": {
+                "title": "Business-Focused Approach",
+                "description": "Technology should serve the business. Every decision is made with the product, users, and long-term goals in mind."
+            },
+            "realism": {
+                "title": "Realistic Expectations",
+                "description": "I prefer to underpromise and overdeliver. Timelines, scope, and costs should be clear from the beginning."
+            },
+            "partnership": {
+                "title": "Partnership Mindset",
+                "description": "I see every project as a collaboration. Your business knowledge and my technical expertise should move forward together."
+            }
+        }
+    },
     "experience": {
         "badge": "MY JOURNEY",
         "title": "Experience & Growth",
@@ -120,6 +152,11 @@
         "feedback": {
             "badge": "FEEDBACK",
             "title": "Previous Collaborations",
+            "firstClient": {
+                "title": "🚀 Your project could be featured here",
+                "description": "I'm building my portfolio alongside my first clients. If you have an idea, a business, or an MVP in mind, we can turn it into the next success story.",
+                "cta": "Ready to be the first?"
+            },
             "items": [
                 {
                     "text": "The MVP was delivered faster than expected. Communication and technical decisions were excellent.",
@@ -130,11 +167,6 @@
                     "text": "The AI proposal helped us validate the project before investing resources.",
                     "author": "Business Owner",
                     "company": "Retail Company"
-                },
-                {
-                    "text": "Clear architecture, realistic roadmap and great understanding of the requirements.",
-                    "author": "Product Manager",
-                    "company": "Tech Startup"
                 }
             ]
         }

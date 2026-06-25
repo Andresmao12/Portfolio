@@ -6,6 +6,7 @@ import Projects from './pages/Projects/Projects'
 import Stack from './pages/Stack/Stack'
 import Clients from './pages/Clients/Clients'
 import Contact from './pages/Contact/Contact'
+import About from './pages/About/About'
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
     <>
       <Nav />
       <Present />
+      <About />
       <Experience />
       <Projects />
       <Stack />

@@ -54,7 +54,7 @@ const Present = () => {
         </section >
 
         <section className={styles.rightContainer}>
-            <img src="img/imgPresent.webp" alt="Mauro" />
+            <img src="img/present.webp" alt="Mauro" />
         </section>
 
 

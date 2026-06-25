@@ -1,0 +1,150 @@
+.aboutSection {
+    padding: 8rem 2rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+
+.header {
+    max-width: 850px;
+
+    & .badge {
+        font-size: inherit;
+        color: var(--text-brand);
+        font-weight: 600;
+    }
+
+    & .title {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        line-height: 1.1;
+    }
+
+    & .lead {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        text-wrap: pretty;
+    }
+}
+
+
+
+.storyContainer {
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.storyText {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.storyText h3 {
+    font-size: 2rem;
+    line-height: 1.2;
+}
+
+.storyText p {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    opacity: .85;
+}
+
+.profileContainer img {
+    width: 100%;
+    height: 520px;
+
+    object-fit: cover;
+    object-position: right center;
+
+    border-radius: 32px;
+    border: 1px solid var(--border-card);
+}
+
+
+
+.servicesPreview {
+    padding: 3rem 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    border-top: 1px solid var(--border-card);
+    border-bottom: 1px solid var(--border-card);
+}
+
+.servicesPreview h3 {
+    font-size: 1.5rem;
+}
+
+.servicesGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.servicesGrid div {
+    padding: 1rem 1.25rem;
+
+    border-radius: 16px;
+
+    background: var(--bg-surface);
+    border: 1px solid var(--border-card);
+
+    font-weight: 500;
+}
+
+
+
+.valuesSection {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+
+    padding-top: 3rem;
+
+    border-top: 1px solid var(--border-card);
+}
+
+.valuesSection strong {
+    font-size: 4rem;
+    color: var(--text-brand);
+    opacity: .15;
+}
+
+.valuesSection h3 {
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+}
+
+.valuesSection p {
+    line-height: 1.8;
+    opacity: .8;
+}
+
+
+
+@media (max-width: 980px) {
+
+    .aboutSection {
+        padding: 6rem 1rem;
+    }
+
+    .storyContainer {
+        grid-template-columns: 1fr;
+    }
+
+    .profileContainer img {
+        height: 350px;
+    }
+
+    .servicesGrid,
+    .valuesSection {
+        grid-template-columns: 1fr;
+    }
+}

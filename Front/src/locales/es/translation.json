@@ -15,6 +15,38 @@
         "phrase": "Desarrollador de Software y Entusiasta de la IA",
         "button": "¡Vamos!"
     },
+    "about": {
+        "badge": "Por qué trabajar conmigo",
+        "title": "Desarrollo productos digitales con enfoque en resultados",
+        "lead": "No solo construyo software. Ayudo a convertir ideas en productos reales que generen valor para las personas y los negocios.",
+        "storyTitle": "Más que código, una visión de producto",
+        "story1": "Soy tecnólogo en desarrollo de software y estudiante de ingeniería de sistemas. Durante los últimos años he trabajado construyendo aplicaciones, explorando inteligencia artificial y participando en proyectos orientados a resolver problemas reales.",
+        "story2": "Me gusta trabajar cerca de las personas detrás de cada proyecto. Antes de escribir una línea de código, busco entender qué problema estamos resolviendo, quién lo necesita y cuál es el resultado esperado.",
+        "story3": "Mi objetivo es crear soluciones simples, escalables y útiles. Cada proyecto es una oportunidad para aprender, mejorar y construir relaciones de confianza a largo plazo.",
+        "servicesTitle": "Lo que puedo ayudarte a construir",
+        "services": {
+            "mvp": "MVPs para validar ideas",
+            "web": "Aplicaciones web",
+            "automation": "Automatización de procesos",
+            "ai": "Soluciones con IA",
+            "internal": "Herramientas internas",
+            "analytics": "Dashboards y analítica"
+        },
+        "values": {
+            "businessFocus": {
+                "title": "Enfoque en negocio",
+                "description": "Cada decisión técnica debe aportar valor real al producto y a los objetivos del proyecto."
+            },
+            "realism": {
+                "title": "Expectativas realistas",
+                "description": "Prefiero prometer menos y entregar más. Los tiempos, alcances y costos deben ser claros desde el inicio."
+            },
+            "partnership": {
+                "title": "Trabajo en equipo",
+                "description": "Veo cada proyecto como una colaboración. Tu conocimiento del negocio y mi experiencia técnica deben avanzar juntos."
+            }
+        }
+    },
     "experience": {
         "badge": "MI RECORRIDO",
         "title": "Experiencia y Crecimiento",
@@ -130,6 +162,11 @@
         "feedback": {
             "badge": "OPINIONES",
             "title": "Lo que dicen sobre mi trabajo",
+            "firstClient": {
+                "title": "🚀 Tu proyecto podría aparecer aquí",
+                "description": "Estoy construyendo mi portafolio junto a mis primeros clientes. Si tienes una idea, un negocio o un MVP en mente, podemos convertirlo en el próximo caso de éxito.",
+                "cta": "¿Te animas a ser el primero?"
+            },
             "items": [
                 {
                     "text": "El MVP estuvo listo antes de lo previsto. La comunicación fue clara y las decisiones técnicas acertadas.",
