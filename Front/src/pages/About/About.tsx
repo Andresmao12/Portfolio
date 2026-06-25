@@ -11,22 +11,24 @@ const About = () => {
     return (
         <section id='about' className={styles.aboutSection}>
 
-            <Header ClassName={styles.header}>
-                <span className={styles.badge}>{t('about.badge')}</span>
-                <h2>{t('about.title')}</h2>
-                <p className={styles.lead}>{t('about.lead')}</p>
-            </Header>
 
             <div className={styles.storyContainer}>
 
-                <div className={styles.storyText}>
+                <div className={styles.storyContainer_text}>
 
-                    <h3>{t('about.storyTitle')}</h3>
+                    <Header ClassName={styles.header}>
+                        <span className={styles.badge}>{t('about.badge')}</span>
+                        <h2>{t('about.title')}</h2>
+                        <p className={styles.lead}>{t('about.lead')}</p>
+                    </Header>
 
-                    <p>{t('about.story1')}</p>
-                    <p>{t('about.story2')}</p>
-                    <p>{t('about.story3')}</p>
+                    <div>
+                        <h3>{t('about.storyTitle')}</h3>
+                        <p>{t('about.story1')}</p>
+                        <p>{t('about.story2')}</p>
+                        <p>{t('about.story3')}</p>
 
+                    </div>
                 </div>
 
                 <div className={styles.profileContainer}>

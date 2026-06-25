@@ -1,5 +1,5 @@
 .aboutSection {
-    padding: 8rem 2rem;
+    padding: 8rem 4rem;
 
     display: flex;
     flex-direction: column;
@@ -8,7 +8,7 @@
 
 
 .header {
-    /* max-width: 850px; */
+    text-wrap: pretty;
 
     & .badge {
         font-size: inherit;
@@ -23,8 +23,8 @@
 
     & .lead {
         font-size: 1.2rem;
+        opacity: .6;
         line-height: 1.8;
-        text-wrap: pretty;
     }
 }
 
@@ -37,22 +37,33 @@
     align-items: center;
 }
 
-.storyText {
+.storyContainer_text {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 2rem;
+
+    padding: 0 2rem;
+
+    & div {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    & h3 {
+        font-size: 2rem;
+        color: var(--brand-primary);
+        opacity: .8;
+        line-height: 1.2;
+    }
+
+    & p {
+        font-size: 1.05rem;
+        line-height: 1.9;
+        opacity: .85;
+    }
 }
 
-.storyText h3 {
-    font-size: 2rem;
-    line-height: 1.2;
-}
-
-.storyText p {
-    font-size: 1.05rem;
-    line-height: 1.9;
-    opacity: .85;
-}
 
 .profileContainer img {
     width: 100%;
@@ -74,7 +85,7 @@
     flex-direction: column;
     gap: 2rem;
 
-     border-top: 1px solid var(--border-card);
+    border-top: 1px solid var(--border-card);
 }
 
 .servicesPreview h3 {
@@ -113,7 +124,7 @@
 .valuesSection strong {
     font-size: 4rem;
     color: var(--text-brand);
-    opacity: .15;
+    opacity: .2;
 }
 
 .valuesSection div {
