@@ -43,9 +43,8 @@
     padding:0 2rem;
 
     opacity:0;
-    transform:translateX(-60px);
 
-    animation:slideLeft .8s ease forwards;
+    animation:fadeUp .8s ease forwards;
     animation-timeline:view();
     animation-range:entry 40% cover 70%;
 }
@@ -71,11 +70,10 @@
 .profileContainer{
 
     opacity:0;
-    transform:translateX(60px);
 
-    animation:slideRight .8s ease forwards;
+    animation:fadeUp .8s ease forwards;
     animation-timeline:view();
-    animation-range:entry 40% cover 70%;
+    animation-range:entry 50% cover 70%;
 }
 
 .profileContainer img{
@@ -291,33 +289,6 @@
 
 }
 
-@keyframes slideLeft{
-
-    from{
-        opacity:0;
-        transform:translateX(-60px);
-    }
-
-    to{
-        opacity:1;
-        transform:translateX(0);
-    }
-
-}
-
-@keyframes slideRight{
-
-    from{
-        opacity:0;
-        transform:translateX(60px);
-    }
-
-    to{
-        opacity:1;
-        transform:translateX(0);
-    }
-
-}
 
 @keyframes fadeUp{
 
