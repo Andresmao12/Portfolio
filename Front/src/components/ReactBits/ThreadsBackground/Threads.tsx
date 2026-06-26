@@ -223,7 +223,7 @@ const Threads: React.FC<ThreadsProps> = ({
       gl.getExtension('WEBGL_lose_context')?.loseContext();
     };
   }, [color, amplitude, distance, enableMouseInteraction]);
-throw Error
+
   return <div ref={containerRef} className="threads-container" {...rest} />;
 };
 
