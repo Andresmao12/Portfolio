@@ -11,7 +11,6 @@ import ExperienceCard from '../../components/ExperienceCard/ExperienceCard';
 import Header from '../../components/Header/Header';
 
 import type { ExperienceItem } from '../../constants/experience';
-import { Import } from 'lucide-react';
 
 const Experience = () => {
 
