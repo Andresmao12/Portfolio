@@ -34,6 +34,25 @@ button {
     border-radius: 16px;
 }
 
+/* SEO */
+.projectsSection,
+.stackContainer,
+.clientsSection,
+.contactSection {
+    content-visibility: auto;
+    contain-intrinsic-size: 900px;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+
+}
+
 
 @theme inline {
     --font-heading: var(--font-sans);

@@ -32,7 +32,7 @@ const About = () => {
                 </div>
 
                 <div className={styles.profileContainer}>
-                    <img src="/img/About.webp" alt="Mauro working" />
+                    <img src="/img/About.webp" alt="Mauro working" loading="lazy" decoding="async" />
                 </div>
 
             </div>
