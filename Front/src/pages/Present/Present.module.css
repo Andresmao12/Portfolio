@@ -87,14 +87,14 @@
 
 html[class="light"] .rightContainer::before {
     background: linear-gradient(to right,
-            #DDD 0%,
-            rgba(221, 221, 221, .98) 5%,
-            rgba(221, 221, 221, .90) 10%,
-            rgba(221, 221, 221, .75) 15%,
-            rgba(221, 221, 221, .55) 20%,
-            rgba(221, 221, 221, .35) 25%,
-            rgba(221, 221, 221, .18) 30%,
-            rgba(221, 221, 221, .06) 35%,
+            var(--bg-page) 0%,
+            color-mix(in srgb, var(--bg-page) 98%, transparent) 5%,
+            color-mix(in srgb, var(--bg-page) 90%, transparent) 10%,
+            color-mix(in srgb, var(--bg-page) 75%, transparent) 15%,
+            color-mix(in srgb, var(--bg-page) 55%, transparent) 20%,
+            color-mix(in srgb, var(--bg-page) 35%, transparent) 25%,
+            color-mix(in srgb, var(--bg-page) 18%, transparent) 30%,
+            color-mix(in srgb, var(--bg-page) 6%, transparent) 35%,
             transparent 40%);
 }
 
@@ -142,20 +142,22 @@ html[class="light"] .rightContainer::before {
         &::before {
             background: linear-gradient(to top,
                     var(--bg-page) 0%,
-                    rgba(0, 0, 17, 0.95) 10%,
-                    rgba(0, 0, 17, 0.7) 20%,
-                    rgba(0, 0, 17, 0) 45%);
+                    color-mix(in srgb, var(--bg-page) 95%, transparent) 10%,
+                    color-mix(in srgb, var(--bg-page) 70%, transparent) 20%,
+                    transparent 45%);
         }
+
     }
 
+
     html[class="light"] .rightContainer::before {
-        background: linear-gradient(to right,
+        background: linear-gradient(to top,
                 var(--bg-page) 0%,
-                rgba(246, 247, 251, 0.90) 5%,
-                rgba(246, 247, 251, 0.70) 20%,
-                rgba(246, 247, 251, 0.55) 35%,
-                rgba(246, 247, 251, 0.35) 50%,
-                rgba(246, 247, 251, 0.10) 70%,
-                rgba(246, 247, 251, 0) 90%);
+                color-mix(in srgb, var(--bg-page) 90%, transparent) 5%,
+                color-mix(in srgb, var(--bg-page) 70%, transparent) 20%,
+                color-mix(in srgb, var(--bg-page) 55%, transparent) 35%,
+                color-mix(in srgb, var(--bg-page) 35%, transparent) 50%,
+                color-mix(in srgb, var(--bg-page) 10%, transparent) 70%,
+                transparent 90%);
     }
 }
