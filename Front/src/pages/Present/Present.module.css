@@ -20,6 +20,14 @@
     overflow: hidden;
 }
 
+.title {
+    font-size: clamp(4rem, 11vw, 8rem);
+    font-weight: 700;
+    font-style: italic;
+    color: var(--text);
+    line-height: .9;
+}
+
 .textContainer {
     position: relative;
 
@@ -78,18 +86,16 @@
 }
 
 html[class="light"] .rightContainer::before {
-background: linear-gradient(
-    to right,
-    #DDD 0%,
-    rgba(221,221,221,.98) 5%,
-    rgba(221,221,221,.90) 10%,
-    rgba(221,221,221,.75) 15%,
-    rgba(221,221,221,.55) 20%,
-    rgba(221,221,221,.35) 25%,
-    rgba(221,221,221,.18) 30%,
-    rgba(221,221,221,.06) 35%,
-    transparent 40%
-);
+    background: linear-gradient(to right,
+            #DDD 0%,
+            rgba(221, 221, 221, .98) 5%,
+            rgba(221, 221, 221, .90) 10%,
+            rgba(221, 221, 221, .75) 15%,
+            rgba(221, 221, 221, .55) 20%,
+            rgba(221, 221, 221, .35) 25%,
+            rgba(221, 221, 221, .18) 30%,
+            rgba(221, 221, 221, .06) 35%,
+            transparent 40%);
 }
 
 .rightContainer img {

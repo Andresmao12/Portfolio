@@ -1,8 +1,9 @@
 import styles from './Experience.module.css';
 
+
 import { useTranslation } from 'react-i18next';
 
-import { lazy, Suspense } from 'react';
+import { lazy, Suspense, useState, useEffect } from 'react';
 const Threads = lazy(() => import('../../components/ReactBits/ThreadsBackground/Threads'));
 import ErrorBoundary from '../../components/ErrorBoundary/ErrorBoundary';
 
@@ -10,10 +11,30 @@ import ExperienceCard from '../../components/ExperienceCard/ExperienceCard';
 import Header from '../../components/Header/Header';
 
 import type { ExperienceItem } from '../../constants/experience';
+import { Import } from 'lucide-react';
 
 const Experience = () => {
 
     const { t } = useTranslation();
+
+    const [showThreads, setShowThreads] = useState(false);
+
+    useEffect(() => {
+        if ("requestIdleCallback" in window) {
+            const id = requestIdleCallback(() => {
+                setShowThreads(true);
+            });
+
+            return () => cancelIdleCallback(id);
+        }
+
+        const timeout = setTimeout(() => {
+            setShowThreads(true);
+        }, 200);
+
+        return () => clearTimeout(timeout);
+    }, []);
+    
 
     const experiences = t('experience.items', {
         returnObjects: true
@@ -57,7 +78,7 @@ const Experience = () => {
                 <div className={styles.backgroundContainer} aria-hidden>
                     <ErrorBoundary fallback={<div className={styles.fallbackBackground} />}>
                         <Suspense fallback={<div className={styles.fallbackBackground} />}>
-                            <Threads amplitude={1} distance={0} />
+                            {showThreads && <Threads amplitude={1} distance={0} />}
                         </Suspense>
                     </ErrorBoundary>
                 </div>
